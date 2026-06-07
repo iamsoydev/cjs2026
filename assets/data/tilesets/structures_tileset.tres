@@ -1,0 +1,92 @@
+[gd_resource type="TileSet" format=3 uid="uid://dutevcw25poae"]
+
+[ext_resource type="Texture2D" uid="uid://dc7y45xf6hpw8" path="res://assets/img/Tilesets/Building parts/Wooden_House_Walls_Tilset.png" id="1_qlnja"]
+[ext_resource type="Texture2D" uid="uid://cux7ewitcbd65" path="res://assets/img/Tilesets/Building parts/Wooden_Bridge_v2.png" id="2_db7wv"]
+[ext_resource type="Texture2D" uid="uid://cmxm3s15p633q" path="res://assets/img/Tilesets/Building parts/Wooden_Bridge.png" id="3_k2xnn"]
+[ext_resource type="Texture2D" uid="uid://d1qr58por5455" path="res://assets/img/Tilesets/Building parts/Fences.png" id="4_oujh7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48s4r"]
+texture = ExtResource("1_qlnja")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gwye4"]
+texture = ExtResource("2_db7wv")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2up2"]
+texture = ExtResource("3_k2xnn")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1gb4b"]
+texture = ExtResource("4_oujh7")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_48s4r")
+sources/1 = SubResource("TileSetAtlasSource_gwye4")
+sources/2 = SubResource("TileSetAtlasSource_g2up2")
+sources/3 = SubResource("TileSetAtlasSource_1gb4b")
