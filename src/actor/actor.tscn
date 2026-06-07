@@ -1,5 +1,17 @@
 [gd_scene format=3 uid="uid://bjc5lpk52l24j"]
 
-[node name="Actor" type="Node2D" unique_id=1613042671]
+[node name="Actor" type="CharacterBody2D" unique_id=879439776]
+collision_layer = 2
+collision_mask = 0
+motion_mode = 1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=338494838]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=360605713]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1896942362]
+
+[node name="InteractionArea2D" type="Area2D" parent="." unique_id=1754246217]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea2D" unique_id=294771808]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97534408]

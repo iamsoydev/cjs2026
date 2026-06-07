@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://62nr6kfqd80a"]
+
+[ext_resource type="PackedScene" uid="uid://bjc5lpk52l24j" path="res://src/actor/actor.tscn" id="1_8urb2"]
+[ext_resource type="Texture2D" uid="uid://dxrtr01142b6p" path="res://assets/img/Animals/Cow/Free Cow Sprites.png" id="2_ry2c7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rcq38"]
+size = Vector2(19, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kidy7"]
+radius = 4.0
+
+[node name="Actor" unique_id=1613042671 instance=ExtResource("1_8urb2")]
+collision_mask = 2
+
+[node name="Sprite2D" parent="." index="0" unique_id=360605713]
+texture = ExtResource("2_ry2c7")
+centered = false
+hframes = 3
+vframes = 2
+
+[node name="CollisionShape2D" parent="InteractionArea2D" parent_id_path=PackedInt32Array(1754246217) index="0" unique_id=294771808]
+position = Vector2(16.5, 21)
+shape = SubResource("RectangleShape2D_rcq38")
+
+[node name="CollisionShape2D" parent="." index="3" unique_id=97534408]
+position = Vector2(15, 22)
+shape = SubResource("CircleShape2D_kidy7")

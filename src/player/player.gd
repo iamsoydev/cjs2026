@@ -11,6 +11,15 @@ func _physics_process(delta: float) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	
+	if event.is_action_pressed("interact"):
+		if ray_cast_2d.is_colliding():
+			var collider := ray_cast_2d.get_collider()
+			if collider is Node2D:
+				print("Player interacted with " + str(collider.get_parent().get_path()))
+				
+				
+				
 	movement_dir = Input.get_vector("walk_left","walk_right","walk_up","walk_down")
 	#TODO: Figure out how to adjust this. Need to look at a previous project
 	match(movement_dir):
