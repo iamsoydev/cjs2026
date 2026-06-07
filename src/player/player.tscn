@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://cp7eql4s5xvgk" path="res://assets/img/Characters/Basic Charakter Spritesheet.png" id="1_4anbu"]
 [ext_resource type="Script" uid="uid://bjo8ujbkj45by" path="res://src/player/player.gd" id="1_rxibo"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_jt8b1"]
+radius = 5.0
+
 [sub_resource type="Animation" id="Animation_rxibo"]
 length = 0.001
 tracks/0/type = "value"
@@ -103,8 +106,12 @@ _data = {
 &"walk_up": SubResource("Animation_8ydov")
 }
 
-[node name="Player" type="Node2D" unique_id=45565635]
+[node name="Player" type="CharacterBody2D" unique_id=876919320]
 script = ExtResource("1_rxibo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=359222699]
+position = Vector2(24, 27)
+shape = SubResource("CircleShape2D_jt8b1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1805904449]
 texture = ExtResource("1_4anbu")
@@ -118,3 +125,7 @@ libraries/ = SubResource("AnimationLibrary_ylhto")
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=360982725]
 position = Vector2(24, 27)
 target_position = Vector2(0, 17)
+collision_mask = 4
+hit_from_inside = true
+collide_with_areas = true
+collide_with_bodies = false
