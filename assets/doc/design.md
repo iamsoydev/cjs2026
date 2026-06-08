@@ -4,12 +4,11 @@ The Instructions are a lie
 	mislead, misdirect, and make players question everything. 
 	just make sure the truth is hidden somewhere... or not.
 
-#### Ideas
-- Hide and seek
-- outdoors
-- first day of school trying to get to cloass or trying to get home from 
-school for the summer?
+Make a game out of the stories in Alice in Riddle land
 
-
-
-Lets make a game out of the stories in Alice in Riddle land
+#### Dialogue system
+- Presentation
+	- name
+	- pfp?
+- Resources to store it
+- Choices (question and answer)
