@@ -1,17 +1,29 @@
 [gd_scene format=3 uid="uid://bjc5lpk52l24j"]
 
+[ext_resource type="Script" uid="uid://dtmq6xnyinb44" path="res://src/actor/actor.gd" id="1_kidy7"]
+[ext_resource type="Script" uid="uid://bmxrdyryqdcs7" path="res://src/interaction-node/interaction_node.gd" id="2_lxq7m"]
+
 [node name="Actor" type="CharacterBody2D" unique_id=879439776]
 collision_layer = 2
 collision_mask = 0
 motion_mode = 1
+script = ExtResource("1_kidy7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=360605713]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1896942362]
 
-[node name="InteractionArea2D" type="Area2D" parent="." unique_id=1754246217]
+[node name="InteractionNode" type="Area2D" parent="." unique_id=1808578823]
 collision_layer = 4
+collision_mask = 4
+script = ExtResource("2_lxq7m")
+cooldown_timer_npath = NodePath("../InteractionCooldownTimer")
+metadata/_custom_type_script = "uid://bmxrdyryqdcs7"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea2D" unique_id=294771808]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractionNode" unique_id=294771808]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97534408]
+
+[node name="InteractionCooldownTimer" type="Timer" parent="." unique_id=735523175]
+
+[connection signal="timeout" from="InteractionCooldownTimer" to="." method="_on_interaction_cooldown_timer_timeout"]

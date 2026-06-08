@@ -15,8 +15,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		if ray_cast_2d.is_colliding():
 			var collider := ray_cast_2d.get_collider()
-			if collider is Node2D:
-				print("Player interacted with " + str(collider.get_parent().get_path()))
+			if collider is InteractionNode:
+				collider.init_interaction(get_path())
 				
 				
 				
