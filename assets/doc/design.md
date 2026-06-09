@@ -12,3 +12,8 @@ Make a game out of the stories in Alice in Riddle land
 	- pfp?
 - Resources to store it
 - Choices (question and answer)
+
+##### Ideas
+Use this as the overall story.
+How else can we involve misdirection in this
+story.
