@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://gobrsm6hse5m"]
+
+[ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="1_uvaqi"]
+
+[resource]
+script = ExtResource("1_uvaqi")
+speaker = "Cow"
+text = "And that is all I have to say I guess."
+metadata/_custom_type_script = "uid://dxwsx41tr2joe"

@@ -15,4 +15,6 @@ func start_interaction() -> void:
 	monitorable = false
 
 func end_interaction() -> void:
-	cooldown_timer.start()
+	if cooldown_timer.is_stopped():
+		cooldown_timer.start()
+		print("Interaction Cooldown initiated")

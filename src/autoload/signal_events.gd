@@ -11,3 +11,7 @@ signal interaction_attempted(
 	source_npath: NodePath)
 signal interaction_started
 signal interaction_ended
+
+#TODO: This is ugly... but it works
+signal player_disable_interaction_requested()
+signal player_enable_interaction_requested()

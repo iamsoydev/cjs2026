@@ -107,6 +107,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D" unique_id=876919320]
+process_mode = 1
 collision_layer = 2
 collision_mask = 2
 motion_mode = 1

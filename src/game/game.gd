@@ -9,6 +9,7 @@ extends Node
 var loaded_dialogue_data: DialogueData
 var current_dialogue_data: DialogueData
 
+var player: CharacterBody2D = null
 
 func _ready() -> void:
 	SignalEvents.ui_dialogue_visibility_change_requested.connect(
@@ -21,6 +22,8 @@ func _ready() -> void:
 	SignalEvents.ui_dialogue_next_segment_requested.connect(
 		_on_ui_dialogue_next_segment_requested
 	)
+
+	# Retrieve Player node
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") and dialogue_control.visible:
@@ -50,7 +53,6 @@ func _on_ui_dialogue_visibility_change_requested(is_visible: bool) -> void:
 	show_dialogue_ui() if is_visible else hide_dialogue_ui()
 
 func _on_ui_dialogue_present_requested(dialogue_data: DialogueData) -> void:
-	#TODO: Stop Controls
 	present_dialogue(dialogue_data)
 
 func _on_ui_dialogue_next_segment_requested() -> void:
@@ -62,17 +64,20 @@ func _on_ui_dialogue_next_segment_requested() -> void:
 		present_dialogue(current_dialogue_data)
 
 func show_dialogue_ui() -> void:
+	SignalEvents.player_disable_interaction_requested.emit()
 	dialogue_control.visible = true
-	sub_viewport.gui_disable_input = true
+	get_tree().paused = true
 
 func hide_dialogue_ui() -> void:
+	print("Hiding Dialogue")
 	dialogue_control.visible = false
-	#TODO: I don't think this works as intended
 	print("interaction ended")
-	sub_viewport.gui_disable_input = false
+	dialogue_control.visible = false
+	get_tree().paused = false
+	SignalEvents.player_enable_interaction_requested.emit()
 
 func present_dialogue(dialogue_data: DialogueData) -> void:
-	show_dialogue_ui()
 	speaker_name_label.text = dialogue_data.speaker
 	rich_text_label.text = dialogue_data.text
+	show_dialogue_ui()
 	
