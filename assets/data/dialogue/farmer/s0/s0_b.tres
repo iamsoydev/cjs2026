@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bv47nxxuglc3v"]
+
+[ext_resource type="Resource" uid="uid://whelr0kagwpl" path="res://assets/data/dialogue/farmer/s0/s0_c.tres" id="1_0wt5l"]
+[ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="2_w7y3o"]
+
+[resource]
+script = ExtResource("2_w7y3o")
+speaker = "Farmer"
+text = "One of the animals have been in the crop agian and I'd like you to find out who."
+next_dialogue = ExtResource("1_0wt5l")
+metadata/_custom_type_script = "uid://dxwsx41tr2joe"

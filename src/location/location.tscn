@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dyhrxjocfejuo" path="res://src/actor/cow/characters/claudia.tscn" id="6_lc0gu"]
 [ext_resource type="PackedScene" uid="uid://vghwch7fco1l" path="res://src/actor/cow/characters/hans.tscn" id="7_hthb8"]
 [ext_resource type="PackedScene" uid="uid://dewby74v6uunw" path="res://src/actor/cow/characters/kyle.tscn" id="8_lc0gu"]
+[ext_resource type="PackedScene" uid="uid://b7xxand28q6ub" path="res://src/actor/cat/farmer.tscn" id="10_hthb8"]
 
 [node name="Location" type="Node2D" unique_id=2032249075]
 y_sort_enabled = true
@@ -46,3 +47,6 @@ offset = Vector2(-125, -50)
 anchor_mode = 0
 zoom = Vector2(2, 2)
 limit_enabled = false
+
+[node name="Farmer" parent="." unique_id=879439776 instance=ExtResource("10_hthb8")]
+position = Vector2(128, 237)

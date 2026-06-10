@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://b56u3k8npy7hx"]
+
+[ext_resource type="Resource" uid="uid://bv47nxxuglc3v" path="res://assets/data/dialogue/farmer/s0/s0_b.tres" id="1_y42nd"]
+[ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="2_fq78d"]
+
+[resource]
+script = ExtResource("2_fq78d")
+speaker = "Farmer"
+text = "You must be the barn whisperer I had requested. I have a couple delinquent animals here."
+next_dialogue = ExtResource("1_y42nd")
+metadata/_custom_type_script = "uid://dxwsx41tr2joe"
