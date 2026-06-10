@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://62nr6kfqd80a"]
+
+[ext_resource type="PackedScene" uid="uid://bjc5lpk52l24j" path="res://src/actor/actor.tscn" id="1_lj15m"]
+[ext_resource type="Script" uid="uid://2s4hwo1np043" path="res://src/actor/cow/cow.gd" id="2_n8m34"]
+[ext_resource type="Texture2D" uid="uid://cbkdjft6vyjc8" path="res://assets/img/Animals/Cow/Purple cow animation sprites.png" id="3_ojj0h"]
+[ext_resource type="Resource" uid="uid://d0i15bna3du84" path="res://assets/data/dialogue/test-cow/dia_init.tres" id="5_wpp20"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pa22y"]
+size = Vector2(17, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kidy7"]
+radius = 4.0
+
+[node name="Actor" unique_id=1613042671 instance=ExtResource("1_lj15m")]
+collision_mask = 2
+script = ExtResource("2_n8m34")
+type = 4
+
+[node name="Sprite2D" parent="." index="0" unique_id=360605713]
+texture = ExtResource("3_ojj0h")
+centered = false
+hframes = 8
+vframes = 8
+
+[node name="CollisionShape2D2" parent="InteractionNode" parent_id_path=PackedInt32Array(1808578823) index="0" unique_id=294771808]
+position = Vector2(15.5, 22)
+shape = SubResource("RectangleShape2D_pa22y")
+
+[node name="CollisionShape2D" parent="." index="3" unique_id=97534408]
+position = Vector2(16, 22)
+shape = SubResource("CircleShape2D_kidy7")
+
+[node name="DialogueNode" parent="." index="5" unique_id=562332893]
+dialogue_data = ExtResource("5_wpp20")

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dtmq6xnyinb44" path="res://src/actor/actor.gd" id="1_kidy7"]
 [ext_resource type="Script" uid="uid://bmxrdyryqdcs7" path="res://src/interaction-node/interaction_node.gd" id="2_lxq7m"]
+[ext_resource type="Script" uid="uid://djbls8rymvdps" path="res://src/dialogue/dialogue_node.gd" id="3_pa22y"]
 
 [node name="Actor" type="CharacterBody2D" unique_id=879439776]
 collision_layer = 2
@@ -25,5 +26,9 @@ metadata/_custom_type_script = "uid://bmxrdyryqdcs7"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97534408]
 
 [node name="InteractionCooldownTimer" type="Timer" parent="." unique_id=735523175]
+
+[node name="DialogueNode" type="Node" parent="." unique_id=562332893]
+script = ExtResource("3_pa22y")
+metadata/_custom_type_script = "uid://djbls8rymvdps"
 
 [connection signal="timeout" from="InteractionCooldownTimer" to="." method="_on_interaction_cooldown_timer_timeout"]
