@@ -5,7 +5,10 @@
 [ext_resource type="TileSet" uid="uid://c0sutmep8tkpd" path="res://assets/data/tilesets/objects_tileset.tres" id="3_2c3xi"]
 [ext_resource type="TileSet" uid="uid://cslb2otl245h8" path="res://assets/data/tilesets/embellishment_tileset.tres" id="4_qwc71"]
 [ext_resource type="PackedScene" uid="uid://viqctij371mf" path="res://src/player/player.tscn" id="5_atm4g"]
-[ext_resource type="PackedScene" uid="uid://62nr6kfqd80a" path="res://src/actor/cow/cow.tscn" id="6_pfpbn"]
+[ext_resource type="PackedScene" uid="uid://c6sa77vt3ijeo" path="res://src/actor/cow/characters/bertha.tscn" id="5_uiitm"]
+[ext_resource type="PackedScene" uid="uid://dyhrxjocfejuo" path="res://src/actor/cow/characters/claudia.tscn" id="6_lc0gu"]
+[ext_resource type="PackedScene" uid="uid://vghwch7fco1l" path="res://src/actor/cow/characters/hans.tscn" id="7_hthb8"]
+[ext_resource type="PackedScene" uid="uid://dewby74v6uunw" path="res://src/actor/cow/characters/kyle.tscn" id="8_lc0gu"]
 
 [node name="Location" type="Node2D" unique_id=2032249075]
 y_sort_enabled = true
@@ -23,8 +26,17 @@ tile_set = ExtResource("3_2c3xi")
 [node name="EmbellishmentTileMapLayer" type="TileMapLayer" parent="." unique_id=1993868870]
 tile_set = ExtResource("4_qwc71")
 
-[node name="Actor" parent="." unique_id=1613042671 instance=ExtResource("6_pfpbn")]
-position = Vector2(154, 140)
+[node name="Bertha" parent="." unique_id=1613042671 instance=ExtResource("5_uiitm")]
+position = Vector2(147, 143)
+
+[node name="Claudia" parent="." unique_id=1045661098 instance=ExtResource("6_lc0gu")]
+position = Vector2(213, 143)
+
+[node name="Hans" parent="." unique_id=1809184823 instance=ExtResource("7_hthb8")]
+position = Vector2(295, 157)
+
+[node name="Kyle" parent="." unique_id=1503338810 instance=ExtResource("8_lc0gu")]
+position = Vector2(291, 227)
 
 [node name="Player" parent="." unique_id=45565635 instance=ExtResource("5_atm4g")]
 position = Vector2(224, 215)

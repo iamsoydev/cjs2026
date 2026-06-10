@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bjc5lpk52l24j" path="res://src/actor/actor.tscn" id="1_lj15m"]
 [ext_resource type="Script" uid="uid://2s4hwo1np043" path="res://src/actor/cow/cow.gd" id="2_n8m34"]
 [ext_resource type="Texture2D" uid="uid://cbkdjft6vyjc8" path="res://assets/img/Animals/Cow/Purple cow animation sprites.png" id="3_ojj0h"]
-[ext_resource type="Resource" uid="uid://d0i15bna3du84" path="res://assets/data/dialogue/test-cow/dia_init.tres" id="5_wpp20"]
+[ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="4_ojj0h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pa22y"]
 size = Vector2(17, 10)
@@ -11,7 +11,11 @@ size = Vector2(17, 10)
 [sub_resource type="CircleShape2D" id="CircleShape2D_kidy7"]
 radius = 4.0
 
-[node name="Actor" unique_id=1613042671 instance=ExtResource("1_lj15m")]
+[sub_resource type="Resource" id="Resource_pfpbn"]
+script = ExtResource("4_ojj0h")
+metadata/_custom_type_script = "uid://dxwsx41tr2joe"
+
+[node name="Cow" unique_id=1613042671 instance=ExtResource("1_lj15m")]
 collision_mask = 2
 script = ExtResource("2_n8m34")
 type = 4
@@ -31,4 +35,4 @@ position = Vector2(16, 22)
 shape = SubResource("CircleShape2D_kidy7")
 
 [node name="DialogueNode" parent="." index="5" unique_id=562332893]
-dialogue_data = ExtResource("5_wpp20")
+dialogue_set = Array[ExtResource("4_ojj0h")]([SubResource("Resource_pfpbn")])

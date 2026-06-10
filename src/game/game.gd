@@ -45,8 +45,8 @@ func _on_interaction_attempted(
 			interaction_node.start_interaction()
 			SignalEvents.interaction_ended.connect( func(): interaction_node.end_interaction() )
 		var d: DialogueNode = interacted_node.get_node("DialogueNode")
-		loaded_dialogue_data = d.dialogue_data
-		current_dialogue_data = d.dialogue_data
+		loaded_dialogue_data = d.dialogue_set[0]
+		current_dialogue_data = d.dialogue_set[0]
 		present_dialogue(current_dialogue_data)
 
 func _on_ui_dialogue_visibility_change_requested(is_visible: bool) -> void:
