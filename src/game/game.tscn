@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cn46487meu4nl" path="res://src/location/location.tscn" id="1_qnjlk"]
 [ext_resource type="Script" uid="uid://dxt60seul3ija" path="res://src/game/game.gd" id="1_s6lek"]
+[ext_resource type="Script" uid="uid://degifyk5gr0yv" path="res://src/ui/dialogue/dialogue_control.gd" id="3_kgj8g"]
 
 [node name="Game" type="Node" unique_id=2055753430]
 process_mode = 3
@@ -44,6 +45,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("3_kgj8g")
 
 [node name="CenterContainer" type="CenterContainer" parent="UI/RootControl/DialogueControl" unique_id=1901877490]
 layout_mode = 1

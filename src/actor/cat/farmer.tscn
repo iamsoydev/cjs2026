@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b7xxand28q6ub"]
 
 [ext_resource type="PackedScene" uid="uid://bjc5lpk52l24j" path="res://src/actor/actor.tscn" id="1_oc7n4"]
+[ext_resource type="Script" uid="uid://bmxmskefvhpfj" path="res://src/actor/cat/farmer.gd" id="2_17twd"]
 [ext_resource type="Texture2D" uid="uid://cp7eql4s5xvgk" path="res://assets/img/Characters/Basic Charakter Spritesheet.png" id="2_b1u5e"]
 [ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="3_kw7p2"]
 [ext_resource type="Resource" uid="uid://b56u3k8npy7hx" path="res://assets/data/dialogue/farmer/s0/s0_a.tres" id="4_17twd"]
@@ -13,6 +14,7 @@ radius = 3.1622777
 size = Vector2(10, 14)
 
 [node name="Farmer" unique_id=879439776 instance=ExtResource("1_oc7n4")]
+script = ExtResource("2_17twd")
 
 [node name="Sprite2D" parent="." index="0" unique_id=360605713]
 texture = ExtResource("2_b1u5e")

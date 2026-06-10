@@ -1,6 +1,9 @@
 class_name DialogueData
 extends Resource
 
-@export var speaker: String = "Anonymous"
-@export_multiline var text: String = "I am error."
-@export var next_dialogue: DialogueData = null
+var active_sequence: int = 0
+@export var speaker: String
+@export var sequences: Array[DialogueSequence] = []
+
+func get_active_sequence() -> DialogueSequence:
+	return sequences[active_sequence]

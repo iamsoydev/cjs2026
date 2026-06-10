@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://jquxhyjmf8rh"]
-
-[ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="1_b6xx0"]
-
-[resource]
-script = ExtResource("1_b6xx0")
-speaker = "Farmer"
-text = "You can find him North East from here with the culprits. He's the Green Cow."
-metadata/_custom_type_script = "uid://dxwsx41tr2joe"

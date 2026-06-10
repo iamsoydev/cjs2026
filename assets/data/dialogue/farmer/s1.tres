@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueSequence" format=3 uid="uid://c3s56csp6edlg"]
+
+[ext_resource type="Script" uid="uid://df176kirhdwrp" path="res://src/dialogue/dialogue_sequence.gd" id="1_t1654"]
+
+[resource]
+script = ExtResource("1_t1654")
+sequence = Array[String](["Have you talked to Kyle? He's the green cow, you'll find him north east, or south west maybe..."])
+metadata/_custom_type_script = "uid://df176kirhdwrp"

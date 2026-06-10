@@ -38,3 +38,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			ray_cast_2d.rotation = deg_to_rad(-90)
 		Vector2.LEFT:
 			ray_cast_2d.rotation = deg_to_rad(90)
+
+
+func _on_interaction_delay_timer_timeout() -> void:
+	pass # Replace with function body.

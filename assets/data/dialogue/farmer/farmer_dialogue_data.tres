@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://b3ggyp0osinu3"]
+
+[ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="1_g76ti"]
+[ext_resource type="Script" uid="uid://df176kirhdwrp" path="res://src/dialogue/dialogue_sequence.gd" id="2_ye82d"]
+[ext_resource type="Resource" uid="uid://yo42kt6lopsk" path="res://assets/data/dialogue/farmer/s0.tres" id="3_ip3kv"]
+[ext_resource type="Resource" uid="uid://c3s56csp6edlg" path="res://assets/data/dialogue/farmer/s1.tres" id="4_d6v7i"]
+
+[resource]
+script = ExtResource("1_g76ti")
+speaker = "Farmer"
+sequences = Array[ExtResource("2_ye82d")]([ExtResource("3_ip3kv"), ExtResource("4_d6v7i")])
+metadata/_custom_type_script = "uid://dxwsx41tr2joe"
