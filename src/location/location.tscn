@@ -5,7 +5,7 @@
 [ext_resource type="TileSet" uid="uid://c0sutmep8tkpd" path="res://assets/data/tilesets/objects_tileset.tres" id="3_2c3xi"]
 [ext_resource type="TileSet" uid="uid://cslb2otl245h8" path="res://assets/data/tilesets/embellishment_tileset.tres" id="4_qwc71"]
 [ext_resource type="PackedScene" uid="uid://viqctij371mf" path="res://src/player/player.tscn" id="5_atm4g"]
-[ext_resource type="PackedScene" uid="uid://62nr6kfqd80a" path="res://src/actor/cow.tscn" id="6_pfpbn"]
+[ext_resource type="PackedScene" uid="uid://62nr6kfqd80a" path="res://src/actor/cow/cow.tscn" id="6_pfpbn"]
 
 [node name="Location" type="Node2D" unique_id=2032249075]
 y_sort_enabled = true
