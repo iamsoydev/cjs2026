@@ -24,11 +24,11 @@ vframes = 2
 position = Vector2(15.5, 22)
 shape = SubResource("RectangleShape2D_pa22y")
 
-[node name="InteractionArea2D#CollisionShape2D" type="CollisionShape2D" parent="." index="3" unique_id=97534408]
-position = Vector2(15, 22)
-shape = SubResource("CircleShape2D_kidy7")
-
-[node name="DialogueNode" type="Node" parent="." index="4" unique_id=1901457340]
+[node name="DialogueNode" type="Node" parent="." index="3" unique_id=1901457340]
 script = ExtResource("3_yn2ut")
 dialogue_data = ExtResource("4_tkbeq")
 metadata/_custom_type_script = "uid://djbls8rymvdps"
+
+[node name="CollisionShape2D" parent="." index="4" unique_id=97534408]
+position = Vector2(16, 22)
+shape = SubResource("CircleShape2D_kidy7")

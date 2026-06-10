@@ -17,3 +17,6 @@ Make a game out of the stories in Alice in Riddle land
 Use this as the overall story.
 How else can we involve misdirection in this
 story.
+
+
+The player does a number of quests around their farm. We stick to a single location.
