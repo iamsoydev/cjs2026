@@ -68,3 +68,12 @@ Guessing the wrong animal could have consequences? Especially for a multiquest g
 guess looses the game. You lose animal loyalty? 
 
 Perhaps you have to present the guilty animal which means you have to walk them somewhere?
+
+Characters:------
+Dormouse
+Madhatter
+Hare
+
+
+Ideas:--------
+Determine who ate the produce.
