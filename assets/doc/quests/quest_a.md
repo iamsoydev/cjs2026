@@ -25,6 +25,7 @@ the guinea pig had died down, "I want to get to the bottom of this!"
 guinea pig was also promptly suppressed.)
 "Did you by any chance steal the jam?" the King asked the March
 Hare.
+
 "I never stole the jam!" pleaded the March Hare. (At this point all
 the remaining guinea pigs cheered, and were all promptly sup-
 pressed.)
@@ -77,3 +78,5 @@ Hare
 
 Ideas:--------
 Determine who ate the produce.
+
+Determine who ate the crop.

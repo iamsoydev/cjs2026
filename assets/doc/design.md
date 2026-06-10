@@ -19,4 +19,5 @@ How else can we involve misdirection in this
 story.
 
 
-The player does a number of quests around their farm. We stick to a single location.
+The player is an animal whisperer on a farm that is trying to solve a case for a farmer.
+At the end of the game the player sees how they scored on the puzzles. 
