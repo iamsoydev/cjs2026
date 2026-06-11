@@ -3,9 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bjc5lpk52l24j" path="res://src/actor/actor.tscn" id="1_oc7n4"]
 [ext_resource type="Script" uid="uid://bmxmskefvhpfj" path="res://src/actor/cat/farmer.gd" id="2_17twd"]
 [ext_resource type="Texture2D" uid="uid://cp7eql4s5xvgk" path="res://assets/img/Characters/Basic Charakter Spritesheet.png" id="2_b1u5e"]
-[ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="3_kw7p2"]
-[ext_resource type="Resource" uid="uid://b56u3k8npy7hx" path="res://assets/data/dialogue/farmer/s0/s0_a.tres" id="4_17twd"]
-[ext_resource type="Resource" uid="uid://c11ey7bq7pcpv" path="res://assets/data/dialogue/farmer/s1/s1_a.tres" id="5_4ypix"]
+[ext_resource type="Resource" uid="uid://b3ggyp0osinu3" path="res://assets/data/dialogue/farmer/farmer_dialogue_data.tres" id="4_ge5wq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b1u5e"]
 radius = 3.1622777
@@ -30,5 +28,5 @@ shape = SubResource("CircleShape2D_b1u5e")
 position = Vector2(24, 24)
 shape = SubResource("RectangleShape2D_o6pw6")
 
-[node name="DialogueNode" parent="." index="5" unique_id=562332893]
-dialogue_set = Array[ExtResource("3_kw7p2")]([ExtResource("4_17twd"), ExtResource("5_4ypix")])
+[node name="DialogueNode" parent="." index="4" unique_id=562332893]
+dialogue_data = ExtResource("4_ge5wq")

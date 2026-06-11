@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_nhvw8")
-sequence = Array[String](["Hello there, you must be the cattle whisperer. It's about time.", "This barn has been causing me all sorts of trouble  Some troublesome cow has been eating my crop.", "I need you to find which cow gone done it. Go... ehm... talk or whatever it is you do to Kyle. ", "He seems to know who's done it. He's the green steer north east on the farm.", "Or was it south west... I can never remember..."])
+entries = Array[String](["Hey! How are you?"])
 metadata/_custom_type_script = "uid://df176kirhdwrp"

@@ -1,16 +1,34 @@
 class_name DialogueNode
 extends Node
 
-@export var dialogue_set: Array[DialogueData] = []
+signal last_dialogue_entry_reached(sequence_idx: int, entry_idx: int)
+signal next_dialogue_entry_reached(sequence_idx: int, entry_idx: int)
+signal next_dialogue_sequence_reached(sequence_idx: int)
 
-var set_idx: int = 0
+@export var dialogue_data: DialogueData = null
 
-func get_current_dialogue_set() -> DialogueData:
-	return dialogue_set[set_idx]
+var active_seq_idx: int = 0: set = set_sequence
+var active_entry_idx: int = 0
 
-func get_dialogue() -> DialogueData:
-	return dialogue_set[set_idx]
+func get_next_dialogue_entry() -> Dialogue:
+	if not dialogue_data: return Dialogue.new()
 
-func init_dialogue() -> void:
-	SignalEvents.ui_dialogue_present_requested.emit(dialogue_set[set_idx])
-	# TODO: How do we determine when the dialogue presenting is over? 
+	active_entry_idx += 1
+	var d: Dialogue
+	d = dialogue_data.get_dialogue(active_seq_idx, active_entry_idx)
+	if d.text.is_empty():
+		last_dialogue_entry_reached.emit(active_seq_idx, active_entry_idx-1)
+	else:
+		next_dialogue_entry_reached.emit(active_seq_idx, active_entry_idx)
+	return d
+
+func get_active_dialogue_entry() -> Dialogue:
+	var d := Dialogue.new()
+	if dialogue_data:
+		d = dialogue_data.get_dialogue(active_seq_idx, active_entry_idx)	
+	return d
+
+func set_sequence(seq_idx: int) -> void:
+	if dialogue_data.sequences.size() > seq_idx:
+		active_seq_idx = seq_idx
+		next_dialogue_sequence_reached.emit(active_seq_idx)

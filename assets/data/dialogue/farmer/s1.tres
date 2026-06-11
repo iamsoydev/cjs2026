@@ -4,5 +4,4 @@
 
 [resource]
 script = ExtResource("1_t1654")
-sequence = Array[String](["Have you talked to Kyle? He's the green cow, you'll find him north east, or south west maybe..."])
 metadata/_custom_type_script = "uid://df176kirhdwrp"

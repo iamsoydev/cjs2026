@@ -25,7 +25,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		if ray_cast_2d.is_colliding():
 			var collider := ray_cast_2d.get_collider()
 			if collider is InteractionNode:
-				collider.init_interaction(get_path())
+				collider.interact(get_path())
 				
 	movement_dir = Input.get_vector("walk_left","walk_right","walk_up","walk_down")
 	#TODO: Figure out how to adjust this. Need to look at a previous project
