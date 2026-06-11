@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueSequenceEntryData" format=3 uid="uid://dcjxllny7nbx"]
+
+[ext_resource type="Script" uid="uid://ctkgw6ik2sd35" path="res://src/dialogue/dialogue_sequence_entry_data.gd" id="1_mg74y"]
+
+[resource]
+script = ExtResource("1_mg74y")
+text = "Infact, just last night one of them got into my wheat! I think Kyle knows who... I can tell by his look."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"

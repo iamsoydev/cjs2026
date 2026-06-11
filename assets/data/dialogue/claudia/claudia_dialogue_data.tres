@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://y7w74luj1lj4"]
+
+[ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="1_s4ivd"]
+[ext_resource type="Script" uid="uid://df176kirhdwrp" path="res://src/dialogue/dialogue_sequence_data.gd" id="2_5y0ls"]
+[ext_resource type="Resource" uid="uid://bwpaqwi5bpm7s" path="res://assets/data/dialogue/claudia/s0.tres" id="3_4nsjk"]
+[ext_resource type="Resource" uid="uid://dttu0g4djc0sj" path="res://assets/data/dialogue/claudia/s1.tres" id="4_pj6ui"]
+
+[resource]
+script = ExtResource("1_s4ivd")
+speaker = "Claudia"
+sequences = Array[ExtResource("2_5y0ls")]([ExtResource("3_4nsjk"), ExtResource("4_pj6ui")])
+metadata/_custom_type_script = "uid://dxwsx41tr2joe"

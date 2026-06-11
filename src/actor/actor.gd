@@ -10,3 +10,10 @@ extends CharacterBody2D
 
 func _on_interaction_cooldown_timer_timeout() -> void:
 	pass # Replace with function body.
+
+func _on_dialogue_node_last_dialogue_entry_reached(sequence_idx: int, entry_idx: int) -> void:
+	pass # Replace with function body.
+
+
+func _on_dialogue_node_dialogue_choice_made(sequence_idx: int, entry_idx: int) -> void:
+	pass # Replace with function body.

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueSequenceEntryData" format=3 uid="uid://c3wrhbymtgueo"]
+
+[ext_resource type="Script" uid="uid://ctkgw6ik2sd35" path="res://src/dialogue/dialogue_sequence_entry_data.gd" id="1_f87wt"]
+
+[resource]
+script = ExtResource("1_f87wt")
+text = "Mooooo!! Wait... you can understand me?"
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"

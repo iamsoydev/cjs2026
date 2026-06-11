@@ -27,3 +27,6 @@ metadata/_custom_type_script = "uid://bmxrdyryqdcs7"
 [node name="DialogueNode" type="Node" parent="." unique_id=562332893]
 script = ExtResource("3_pa22y")
 metadata/_custom_type_script = "uid://djbls8rymvdps"
+
+[connection signal="dialogue_choice_made" from="DialogueNode" to="." method="_on_dialogue_node_dialogue_choice_made"]
+[connection signal="last_dialogue_entry_reached" from="DialogueNode" to="." method="_on_dialogue_node_last_dialogue_entry_reached"]

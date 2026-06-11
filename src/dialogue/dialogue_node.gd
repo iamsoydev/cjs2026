@@ -4,6 +4,9 @@ extends Node
 signal last_dialogue_entry_reached(sequence_idx: int, entry_idx: int)
 signal next_dialogue_entry_reached(sequence_idx: int, entry_idx: int)
 signal next_dialogue_sequence_reached(sequence_idx: int)
+signal last_dialogue_sequence_reached(sequence_idx: int)
+
+signal dialogue_choice_made(sequence_idx: int, entry_idx: int)
 
 @export var dialogue_data: DialogueData = null
 
@@ -17,6 +20,7 @@ func get_next_dialogue_entry() -> Dialogue:
 	var d: Dialogue
 	d = dialogue_data.get_dialogue(active_seq_idx, active_entry_idx)
 	if d.text.is_empty():
+		active_entry_idx = 0
 		last_dialogue_entry_reached.emit(active_seq_idx, active_entry_idx-1)
 	else:
 		next_dialogue_entry_reached.emit(active_seq_idx, active_entry_idx)
@@ -31,4 +35,12 @@ func get_active_dialogue_entry() -> Dialogue:
 func set_sequence(seq_idx: int) -> void:
 	if dialogue_data.sequences.size() > seq_idx:
 		active_seq_idx = seq_idx
+		active_entry_idx = 0
 		next_dialogue_sequence_reached.emit(active_seq_idx)
+
+func make_dialogue_choice(choice_idx: int) -> void:
+	var dc: DialogueChoice = dialogue_data.get_dialogue(active_seq_idx, active_entry_idx)
+	var next_seq: int = dc.choices[choice_idx].next_seq_idx
+	dialogue_choice_made.emit(active_seq_idx, active_entry_idx)
+	set_sequence(next_seq)
+	

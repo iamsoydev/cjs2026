@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueSequenceEntryData" format=3 uid="uid://bxmo2w4w1l40o"]
+
+[ext_resource type="Script" uid="uid://ctkgw6ik2sd35" path="res://src/dialogue/dialogue_sequence_entry_data.gd" id="1_eaqj6"]
+
+[resource]
+script = ExtResource("1_eaqj6")
+text = "Or was that south west... oh my, my memory is failing me..."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"

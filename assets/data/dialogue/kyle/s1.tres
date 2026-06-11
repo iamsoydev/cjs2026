@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueSequenceData" format=3 uid="uid://cc1rghkmw8lc1"]
+
+[ext_resource type="Script" uid="uid://ctkgw6ik2sd35" path="res://src/dialogue/dialogue_sequence_entry_data.gd" id="1_okkw3"]
+[ext_resource type="Resource" uid="uid://072gacp2uxxf" path="res://assets/data/dialogue/kyle/s1e0.tres" id="2_ywcla"]
+[ext_resource type="Script" uid="uid://df176kirhdwrp" path="res://src/dialogue/dialogue_sequence_data.gd" id="3_p2m7g"]
+
+[resource]
+script = ExtResource("3_p2m7g")
+entries = Array[ExtResource("1_okkw3")]([ExtResource("2_ywcla")])
+metadata/_custom_type_script = "uid://df176kirhdwrp"

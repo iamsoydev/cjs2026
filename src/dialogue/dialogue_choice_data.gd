@@ -1,4 +1,4 @@
 class_name DialogueChoiceData
-extends DialogueData
+extends DialogueSequenceEntryData
 
-@export var choices: Array[DialogueData] = []
+@export var next_seq_idx: int = 0

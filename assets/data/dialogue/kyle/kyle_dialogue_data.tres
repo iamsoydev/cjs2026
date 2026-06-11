@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cwfglxiub0ou8"]
+
+[ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="1_410lg"]
+[ext_resource type="Script" uid="uid://df176kirhdwrp" path="res://src/dialogue/dialogue_sequence_data.gd" id="2_asl1p"]
+[ext_resource type="Resource" uid="uid://bypf1xocddtg4" path="res://assets/data/dialogue/kyle/s0.tres" id="3_dqynm"]
+[ext_resource type="Resource" uid="uid://cc1rghkmw8lc1" path="res://assets/data/dialogue/kyle/s1.tres" id="4_y1jps"]
+[ext_resource type="Resource" uid="uid://yp8ks72y1tbl" path="res://assets/data/dialogue/kyle/s2.tres" id="5_y1jps"]
+[ext_resource type="Resource" uid="uid://dpnislxy8fgt6" path="res://assets/data/dialogue/kyle/s3.tres" id="6_j1xr0"]
+
+[resource]
+script = ExtResource("1_410lg")
+speaker = "Kyle"
+sequences = Array[ExtResource("2_asl1p")]([ExtResource("3_dqynm"), ExtResource("4_y1jps"), ExtResource("5_y1jps"), ExtResource("6_j1xr0")])
+metadata/_custom_type_script = "uid://dxwsx41tr2joe"

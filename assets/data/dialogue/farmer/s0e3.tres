@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueSequenceEntryData" format=3 uid="uid://p5yt2au3k54d"]
+
+[ext_resource type="Script" uid="uid://ctkgw6ik2sd35" path="res://src/dialogue/dialogue_sequence_entry_data.gd" id="1_114ce"]
+
+[resource]
+script = ExtResource("1_114ce")
+text = "Go talk... er, or whatever it is you do with Kyle, he's the green steer in the north east corner of the farm."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
