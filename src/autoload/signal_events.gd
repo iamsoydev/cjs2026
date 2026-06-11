@@ -8,10 +8,7 @@ signal ui_dialogue_next_segment_requested
 
 signal dialogue_initiated(dialogue_node_npath: NodePath)
 
-signal quest_phase_completed(quest_id: int, completed_phase: int)
-signal quest_phase_started(quest_id: int, started_phase: int)
-signal quest_completed(quest_id: int)
-signal quest_started(quest_id: int)
+signal quest_objective_completed(quest_idx: int, quest_objective_idx: int)
 
 signal interaction_attempted(
 	interaction_type: InteractionNode.InteractionType,

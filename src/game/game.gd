@@ -1,8 +1,20 @@
 extends Node
 
+# TODO: Respond to quests
+# Quest Updated
+# Quest Objected Updated
+#  - Progressed it further?
+#  - Now have access to a new part?
+#  - Inform relevent quest listeners
 
-#TODO: Delegate interactions
- 
+var quest := {
+	'id' = {
+		'objective': {
+			'status' : 'completed'
+		}
+	}
+}
+
 func _ready() -> void:
 	SignalEvents.interaction_attempted.connect(_on_interaction_attempted)
 

@@ -13,7 +13,7 @@ const PURPLE_COW_SPRITES= preload("uid://cbkdjft6vyjc8")
 func set_type(t: int) -> void:
 	type = t
 	if Engine.is_editor_hint():
-		if sprite_2d.is_node_ready():
+		if sprite_2d and sprite_2d.is_node_ready():
 			var texture: Texture2D
 			match(type):
 				0: texture = LIGHT_COW_SPRITES
