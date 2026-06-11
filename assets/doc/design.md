@@ -21,3 +21,9 @@ story.
 
 The player is an animal whisperer on a farm that is trying to solve a case for a farmer.
 At the end of the game the player sees how they scored on the puzzles. 
+
+### TODO
+- Create Start Menu
+- Add Music and Sound FX
+- Create endgame score tally/report card  
+- Create Cover Art (Have someone do it for me?)
