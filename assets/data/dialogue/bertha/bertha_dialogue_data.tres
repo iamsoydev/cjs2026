@@ -2,7 +2,40 @@
 
 [ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="1_hs50a"]
 [ext_resource type="Script" uid="uid://df176kirhdwrp" path="res://src/dialogue/dialogue_sequence_data.gd" id="2_vjdqu"]
+[ext_resource type="Script" uid="uid://ctkgw6ik2sd35" path="res://src/dialogue/dialogue_sequence_entry_data.gd" id="3_vjdqu"]
+
+[sub_resource type="Resource" id="Resource_iyee1"]
+script = ExtResource("3_vjdqu")
+text = "Moo."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_3fad7"]
+script = ExtResource("2_vjdqu")
+entries = Array[ExtResource("3_vjdqu")]([SubResource("Resource_iyee1")])
+metadata/_custom_type_script = "uid://df176kirhdwrp"
+
+[sub_resource type="Resource" id="Resource_3im26"]
+script = ExtResource("3_vjdqu")
+text = "Okay I know how it looks but I never ate it!! I swear please believe me!"
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_lk8g4"]
+script = ExtResource("2_vjdqu")
+entries = Array[ExtResource("3_vjdqu")]([SubResource("Resource_3im26")])
+metadata/_custom_type_script = "uid://df176kirhdwrp"
+
+[sub_resource type="Resource" id="Resource_3tn7d"]
+script = ExtResource("3_vjdqu")
+text = "I swear I never touched the Farmer's Wheat!"
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_hu5n7"]
+script = ExtResource("2_vjdqu")
+entries = Array[ExtResource("3_vjdqu")]([SubResource("Resource_3tn7d")])
+metadata/_custom_type_script = "uid://df176kirhdwrp"
 
 [resource]
 script = ExtResource("1_hs50a")
+speaker = "Bertha"
+sequences = Array[ExtResource("2_vjdqu")]([SubResource("Resource_3fad7"), SubResource("Resource_lk8g4"), SubResource("Resource_hu5n7")])
 metadata/_custom_type_script = "uid://dxwsx41tr2joe"

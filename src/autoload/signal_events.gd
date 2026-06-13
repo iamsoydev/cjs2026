@@ -8,7 +8,10 @@ signal ui_dialogue_next_segment_requested
 
 signal dialogue_initiated(dialogue_node_npath: NodePath)
 
-signal quest_objective_completed(quest_idx: int, quest_objective_idx: int)
+signal quest_objective_completed(quest_id: int, quest_objective_id: int)
+signal quest_completed(quest_id: int)
+## Used by Actors to notify game of an objective completion
+signal quest_notify_objective_completed(quest_id: int, quest_objective_id: int)
 
 signal interaction_attempted(
 	interaction_type: InteractionNode.InteractionType,

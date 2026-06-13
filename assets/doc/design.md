@@ -22,6 +22,13 @@ story.
 The player is an animal whisperer on a farm that is trying to solve a case for a farmer.
 At the end of the game the player sees how they scored on the puzzles. 
 
+# Quest system
+Will use the global signal system to inform the game object that a quest or quest
+objective has been completed. The code responsible for checking whether or not 
+a quest objective has been completed will be localized on the individual actor
+objects. I believe this method, while not ideal will be suitable for this game 
+jam entry.
+
 ### TODO
 - Create Start Menu
 - Add Music and Sound FX

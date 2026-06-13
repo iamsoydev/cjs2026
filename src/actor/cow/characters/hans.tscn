@@ -1,26 +1,15 @@
 [gd_scene format=3 uid="uid://vghwch7fco1l"]
 
 [ext_resource type="PackedScene" uid="uid://62nr6kfqd80a" path="res://src/actor/cow/cow.tscn" id="1_7k1r3"]
+[ext_resource type="Script" uid="uid://da66dvl1j5xq0" path="res://src/actor/cow/characters/hans.gd" id="2_7elfe"]
 [ext_resource type="Texture2D" uid="uid://uj0vqttupncw" path="res://assets/img/Animals/Cow/Brown cow animations.png" id="2_21qcx"]
-[ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="3_21qcx"]
-
-[sub_resource type="Resource" id="Resource_6lhkj"]
-script = ExtResource("3_21qcx")
-speaker = "Hans"
-text = "You're here about the corn arn't you... Okay well I know how it looks so obviously one of us ate it! But it wasn't me! I swear!"
-metadata/_custom_type_script = "uid://dxwsx41tr2joe"
-
-[sub_resource type="Resource" id="Resource_uiitm"]
-script = ExtResource("3_21qcx")
-speaker = "Hans"
-text = "Yes one of us ate it. But it wasn't me! I swear!"
-metadata/_custom_type_script = "uid://dxwsx41tr2joe"
+[ext_resource type="Resource" uid="uid://db5n8t8afqu68" path="res://assets/data/dialogue/hans/hans_dialogue_data.tres" id="4_7elfe"]
 
 [node name="Hans" unique_id=1613042671 instance=ExtResource("1_7k1r3")]
-type = 1
+script = ExtResource("2_7elfe")
 
 [node name="Sprite2D" parent="." index="0" unique_id=360605713]
 texture = ExtResource("2_21qcx")
 
-[node name="DialogueNode" parent="." index="5" unique_id=562332893]
-dialogue_set = Array[ExtResource("3_21qcx")]([SubResource("Resource_6lhkj"), SubResource("Resource_uiitm")])
+[node name="DialogueNode" parent="." index="4" unique_id=562332893]
+dialogue_data = ExtResource("4_7elfe")

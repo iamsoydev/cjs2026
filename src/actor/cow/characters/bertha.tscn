@@ -1,27 +1,11 @@
 [gd_scene format=3 uid="uid://c6sa77vt3ijeo"]
 
 [ext_resource type="PackedScene" uid="uid://62nr6kfqd80a" path="res://src/actor/cow/cow.tscn" id="1_x6ulb"]
-[ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="2_jye74"]
-
-[sub_resource type="Resource" id="Resource_6lhkj"]
-script = ExtResource("2_jye74")
-speaker = "Bertha"
-text = "Mooooo!"
-metadata/_custom_type_script = "uid://dxwsx41tr2joe"
-
-[sub_resource type="Resource" id="Resource_ylppk"]
-script = ExtResource("2_jye74")
-speaker = "Bertha"
-text = "What you think its me?! I never stole anything!"
-metadata/_custom_type_script = "uid://dxwsx41tr2joe"
-
-[sub_resource type="Resource" id="Resource_jye74"]
-script = ExtResource("2_jye74")
-speaker = "Bertha"
-text = "I didn't steal a thing!"
-metadata/_custom_type_script = "uid://dxwsx41tr2joe"
+[ext_resource type="Script" uid="uid://c2n3rnwqhph2m" path="res://src/actor/cow/characters/bertha.gd" id="2_jye74"]
+[ext_resource type="Resource" uid="uid://bead1rkc2veva" path="res://assets/data/dialogue/bertha/bertha_dialogue_data.tres" id="3_6psr4"]
 
 [node name="Bertha" unique_id=1613042671 instance=ExtResource("1_x6ulb")]
+script = ExtResource("2_jye74")
 
-[node name="DialogueNode" parent="." index="5" unique_id=562332893]
-dialogue_set = Array[ExtResource("2_jye74")]([SubResource("Resource_6lhkj"), SubResource("Resource_ylppk"), SubResource("Resource_jye74")])
+[node name="DialogueNode" parent="." index="4" unique_id=562332893]
+dialogue_data = ExtResource("3_6psr4")
