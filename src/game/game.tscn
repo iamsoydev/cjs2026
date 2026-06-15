@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cn46487meu4nl" path="res://src/location/location.tscn" id="1_qnjlk"]
 [ext_resource type="Script" uid="uid://dxt60seul3ija" path="res://src/game/game.gd" id="1_s6lek"]
 [ext_resource type="Script" uid="uid://degifyk5gr0yv" path="res://src/ui/dialogue/dialogue_control.gd" id="3_kgj8g"]
+[ext_resource type="PackedScene" uid="uid://ct0ext5echnof" path="res://src/ui/dialogue/dialogue_choices.tscn" id="4_l80un"]
 
 [node name="Game" type="Node" unique_id=2055753430]
 process_mode = 3
@@ -38,7 +39,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="DialogueControl" type="Control" parent="UI/RootControl" unique_id=191184350]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -68,10 +68,18 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="RichTextLabel" type="RichTextLabel" parent="UI/RootControl/DialogueControl/CenterContainer/DialoguePanelContainer/MarginContainer" unique_id=1439198377]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/RootControl/DialogueControl/CenterContainer/DialoguePanelContainer/MarginContainer" unique_id=1846086693]
 layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/RootControl/DialogueControl/CenterContainer/DialoguePanelContainer/MarginContainer/VBoxContainer" unique_id=1439198377]
+layout_mode = 2
+size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 20
 text = "This is dialogue"
+
+[node name="DialogueChoices" parent="UI/RootControl/DialogueControl/CenterContainer/DialoguePanelContainer/MarginContainer/VBoxContainer" unique_id=1728507655 instance=ExtResource("4_l80un")]
+visible = false
+layout_mode = 2
 
 [node name="Panel" type="PanelContainer" parent="UI/RootControl/DialogueControl" unique_id=1682977078]
 layout_mode = 1

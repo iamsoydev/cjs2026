@@ -5,6 +5,7 @@ signal ui_dialogue_present_requested(dialogue_npath: NodePath)
 signal ui_dialogue_present_ended
 signal ui_dialogue_end_requested
 signal ui_dialogue_next_segment_requested
+signal ui_dialogue_choice_made(choice_idx: int)
 
 signal dialogue_initiated(dialogue_node_npath: NodePath)
 

@@ -2,9 +2,37 @@
 
 [ext_resource type="Script" uid="uid://ctkgw6ik2sd35" path="res://src/dialogue/dialogue_sequence_entry_data.gd" id="1_ocpkq"]
 [ext_resource type="Resource" uid="uid://ifd8yl56usgq" path="res://assets/data/dialogue/farmer/s2c0.tres" id="2_awfj5"]
+[ext_resource type="Script" uid="uid://bx8n42ix0srfg" path="res://src/dialogue/dialogue_choice_data.gd" id="3_1ruxq"]
 [ext_resource type="Script" uid="uid://df176kirhdwrp" path="res://src/dialogue/dialogue_sequence_data.gd" id="3_n4jnt"]
+[ext_resource type="Script" uid="uid://c5pnhjtuah0a3" path="res://src/dialogue/dialogue_sequence_choice_data.gd" id="4_21ldp"]
+
+[sub_resource type="Resource" id="Resource_yarin"]
+script = ExtResource("3_1ruxq")
+text = "Claudia"
+metadata/_custom_type_script = "uid://bx8n42ix0srfg"
+
+[sub_resource type="Resource" id="Resource_jhw8o"]
+script = ExtResource("3_1ruxq")
+text = "Hans"
+metadata/_custom_type_script = "uid://bx8n42ix0srfg"
+
+[sub_resource type="Resource" id="Resource_n7s5x"]
+script = ExtResource("3_1ruxq")
+text = "Bertha"
+metadata/_custom_type_script = "uid://bx8n42ix0srfg"
+
+[sub_resource type="Resource" id="Resource_6kr85"]
+script = ExtResource("3_1ruxq")
+text = "Kyle"
+metadata/_custom_type_script = "uid://bx8n42ix0srfg"
+
+[sub_resource type="Resource" id="Resource_xptat"]
+script = ExtResource("4_21ldp")
+choices = Array[ExtResource("3_1ruxq")]([SubResource("Resource_yarin"), SubResource("Resource_jhw8o"), SubResource("Resource_n7s5x"), SubResource("Resource_6kr85")])
+text = "Who do you think did it?"
+metadata/_custom_type_script = "uid://c5pnhjtuah0a3"
 
 [resource]
 script = ExtResource("3_n4jnt")
-entries = Array[ExtResource("1_ocpkq")]([ExtResource("2_awfj5")])
+entries = Array[ExtResource("1_ocpkq")]([ExtResource("2_awfj5"), SubResource("Resource_xptat")])
 metadata/_custom_type_script = "uid://df176kirhdwrp"

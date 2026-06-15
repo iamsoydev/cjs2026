@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bl0mlhx8r712n"]
+
+[node name="DialogueChoice" type="HBoxContainer" unique_id=1514450494]
+
+[node name="Label" type="Label" parent="." unique_id=594565890]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Option A"
