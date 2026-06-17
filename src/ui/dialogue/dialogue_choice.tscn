@@ -1,8 +1,23 @@
 [gd_scene format=3 uid="uid://bl0mlhx8r712n"]
 
-[node name="DialogueChoice" type="HBoxContainer" unique_id=1514450494]
+[node name="DialogueChoice" type="Control" unique_id=481372797]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Label" type="Label" parent="." unique_id=594565890]
-layout_mode = 2
-size_flags_horizontal = 10
-text = "Option A"
+[node name="Label" type="RichTextLabel" parent="." unique_id=634511729]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 14.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
+bbcode_enabled = true
+text = "Option"
+fit_content = true
+scroll_active = false

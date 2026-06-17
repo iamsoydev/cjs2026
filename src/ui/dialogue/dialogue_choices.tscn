@@ -3,5 +3,9 @@
 [ext_resource type="Script" uid="uid://deq7wkvfsq6ii" path="res://src/ui/dialogue/dialogue_choices.gd" id="1_s8wja"]
 
 [node name="DialogueChoices" type="HBoxContainer" unique_id=1728507655]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 28.0
+grow_horizontal = 2
 theme_override_constants/separation = 15
 script = ExtResource("1_s8wja")

@@ -17,4 +17,5 @@ func get_dialogue(seq_idx:int, entry_idx:int) -> Dialogue:
 				d.choices = entry_data.choices
 
 			d.text = entry_data.text
+			d.speaker = speaker
 	return d

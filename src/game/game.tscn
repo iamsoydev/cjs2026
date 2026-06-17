@@ -80,6 +80,7 @@ text = "This is dialogue"
 [node name="DialogueChoices" parent="UI/RootControl/DialogueControl/CenterContainer/DialoguePanelContainer/MarginContainer/VBoxContainer" unique_id=1728507655 instance=ExtResource("4_l80un")]
 visible = false
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="Panel" type="PanelContainer" parent="UI/RootControl/DialogueControl" unique_id=1682977078]
 layout_mode = 1
