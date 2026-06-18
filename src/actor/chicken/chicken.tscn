@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bajq284tk4qf2"]
+
+[ext_resource type="PackedScene" uid="uid://bjc5lpk52l24j" path="res://src/actor/actor.tscn" id="1_203j0"]
+[ext_resource type="Script" uid="uid://dgm8lvsk4u2oy" path="res://src/actor/chicken/chicken.gd" id="2_glakk"]
+[ext_resource type="Texture2D" uid="uid://cvr8x5rab5xtw" path="res://assets/img/Animals/Chicken/chicken default.png" id="3_2inii"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2inii"]
+size = Vector2(11, 11)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_203j0"]
+radius = 3.1622777
+
+[node name="Actor" unique_id=879439776 instance=ExtResource("1_203j0")]
+script = ExtResource("2_glakk")
+type = 0
+
+[node name="Sprite2D" parent="." index="0" unique_id=360605713]
+texture = ExtResource("3_2inii")
+hframes = 8
+vframes = 27
+
+[node name="CollisionShape2D2" parent="InteractionNode" parent_id_path=PackedInt32Array(1808578823) index="0" unique_id=294771808]
+position = Vector2(-1.5, 0.5)
+shape = SubResource("RectangleShape2D_2inii")
+
+[node name="CollisionShape2D" parent="." index="3" unique_id=97534408]
+position = Vector2(-2, 3)
+shape = SubResource("CircleShape2D_203j0")

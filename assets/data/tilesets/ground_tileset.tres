@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://stopcv3pcmye" path="res://assets/img/Tilesets/ground tiles/New tiles/Darker_Grass_Tiles_v2.png" id="6_8trcj"]
 [ext_resource type="Texture2D" uid="uid://c0v65khhl1153" path="res://assets/img/Tilesets/ground tiles/New tiles/Darker_Grass_Tile_Layers.png" id="7_4i4u5"]
 [ext_resource type="Texture2D" uid="uid://b0pfhwxgpy1jx" path="res://assets/img/Tilesets/ground tiles/New tiles/Darker_Grass_Tile_Layers2.png" id="8_lfl8m"]
+[ext_resource type="Texture2D" uid="uid://dpu2lf34juab" path="res://assets/img/Tilesets/ground tiles/water frames/Water.png" id="9_rj3ny"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b2cfy"]
 texture = ExtResource("1_2iq3l")
@@ -540,6 +541,13 @@ texture = ExtResource("8_lfl8m")
 4:6/0 = 0
 5:6/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0fesd"]
+texture = ExtResource("9_rj3ny")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
 [resource]
 sources/0 = SubResource("TileSetAtlasSource_b2cfy")
 sources/1 = SubResource("TileSetAtlasSource_y54eo")
@@ -549,3 +557,4 @@ sources/4 = SubResource("TileSetAtlasSource_04nwf")
 sources/5 = SubResource("TileSetAtlasSource_r4blu")
 sources/6 = SubResource("TileSetAtlasSource_1x56i")
 sources/7 = SubResource("TileSetAtlasSource_fp2ky")
+sources/8 = SubResource("TileSetAtlasSource_0fesd")
