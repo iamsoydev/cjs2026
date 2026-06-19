@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://mdbsui48ym0e"]
+
+[ext_resource type="PackedScene" uid="uid://dgh6y0ssm0cmd" path="res://src/actor/calf/calf.tscn" id="1_k0pmn"]
+[ext_resource type="Script" uid="uid://0jxvtkud0jqn" path="res://src/actor/calf/characters/brenda.gd" id="2_wmqec"]
+[ext_resource type="Texture2D" uid="uid://bvdkd0fq3kwxy" path="res://assets/img/Animals/Cow_Baby/baby pink cow animations sprites.png" id="3_i126t"]
+[ext_resource type="Resource" uid="uid://bduo145lykydq" path="res://assets/data/dialogue/brenda/brenda_dialogue_data.tres" id="4_wmqec"]
+
+[node name="Brenda" unique_id=879439776 instance=ExtResource("1_k0pmn")]
+script = ExtResource("2_wmqec")
+
+[node name="Sprite2D" parent="." index="0" unique_id=360605713]
+texture = ExtResource("3_i126t")
+
+[node name="DialogueNode" parent="." index="4" unique_id=562332893]
+dialogue_data = ExtResource("4_wmqec")

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d008i7s6sikl8"]
+
+[ext_resource type="PackedScene" uid="uid://dgh6y0ssm0cmd" path="res://src/actor/calf/calf.tscn" id="1_hwkb5"]
+[ext_resource type="Script" uid="uid://dvp7ejtfgq63o" path="res://src/actor/calf/characters/earl.gd" id="2_41nwl"]
+[ext_resource type="Texture2D" uid="uid://ctt5i8xnsxhl1" path="res://assets/img/Animals/Cow_Baby/baby green cow animations sprites.png" id="2_hwkb5"]
+[ext_resource type="Resource" uid="uid://byuqhiwu3h73i" path="res://assets/data/dialogue/earl/earl_dialogue_data.tres" id="4_nucbw"]
+
+[node name="Earl" unique_id=879439776 instance=ExtResource("1_hwkb5")]
+script = ExtResource("2_41nwl")
+
+[node name="Sprite2D" parent="." index="0" unique_id=360605713]
+texture = ExtResource("2_hwkb5")
+
+[node name="DialogueNode" parent="." index="4" unique_id=562332893]
+dialogue_data = ExtResource("4_nucbw")

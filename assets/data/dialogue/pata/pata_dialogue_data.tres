@@ -1,0 +1,81 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://byobc50y3nnu7"]
+
+[ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="1_jclwd"]
+[ext_resource type="Script" uid="uid://df176kirhdwrp" path="res://src/dialogue/dialogue_sequence_data.gd" id="2_n7pxa"]
+[ext_resource type="Script" uid="uid://ctkgw6ik2sd35" path="res://src/dialogue/dialogue_sequence_entry_data.gd" id="3_n7pxa"]
+
+[sub_resource type="Resource" id="Resource_pqkdh"]
+script = ExtResource("3_n7pxa")
+text = "Tweet"
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_vrewo"]
+script = ExtResource("2_n7pxa")
+entries = Array[ExtResource("3_n7pxa")]([SubResource("Resource_pqkdh")])
+metadata/_custom_type_script = "uid://df176kirhdwrp"
+
+[sub_resource type="Resource" id="Resource_i387q"]
+script = ExtResource("3_n7pxa")
+text = "Y'know Earl is Kyle's Son."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_ims53"]
+script = ExtResource("3_n7pxa")
+text = "Like father like son right?"
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_slrb3"]
+script = ExtResource("2_n7pxa")
+entries = Array[ExtResource("3_n7pxa")]([SubResource("Resource_i387q"), SubResource("Resource_ims53")])
+metadata/_custom_type_script = "uid://df176kirhdwrp"
+
+[sub_resource type="Resource" id="Resource_3ugjs"]
+script = ExtResource("3_n7pxa")
+text = "You were right about Hans."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_gmugy"]
+script = ExtResource("3_n7pxa")
+text = "And who else would help him other than his own son Earnie."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_mgv67"]
+script = ExtResource("2_n7pxa")
+entries = Array[ExtResource("3_n7pxa")]([SubResource("Resource_3ugjs"), SubResource("Resource_gmugy")])
+metadata/_custom_type_script = "uid://df176kirhdwrp"
+
+[sub_resource type="Resource" id="Resource_wk0v7"]
+script = ExtResource("3_n7pxa")
+text = "I'll be honest you surprised me with Bertha."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_n7pxa"]
+script = ExtResource("3_n7pxa")
+text = "But what wouldn't surprise me? Brenda."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_hlbo6"]
+script = ExtResource("2_n7pxa")
+entries = Array[ExtResource("3_n7pxa")]([SubResource("Resource_wk0v7"), SubResource("Resource_n7pxa")])
+metadata/_custom_type_script = "uid://df176kirhdwrp"
+
+[sub_resource type="Resource" id="Resource_t3vf5"]
+script = ExtResource("3_n7pxa")
+text = "You saw right through Claudia's guise."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_dajkv"]
+script = ExtResource("3_n7pxa")
+text = "I can tell you her son Barnie is just like her."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_a8kkp"]
+script = ExtResource("2_n7pxa")
+entries = Array[ExtResource("3_n7pxa")]([SubResource("Resource_t3vf5"), SubResource("Resource_dajkv")])
+metadata/_custom_type_script = "uid://df176kirhdwrp"
+
+[resource]
+script = ExtResource("1_jclwd")
+speaker = "Pata"
+sequences = Array[ExtResource("2_n7pxa")]([SubResource("Resource_vrewo"), SubResource("Resource_slrb3"), SubResource("Resource_mgv67"), SubResource("Resource_hlbo6"), SubResource("Resource_a8kkp")])
+metadata/_custom_type_script = "uid://dxwsx41tr2joe"

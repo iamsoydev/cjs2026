@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://besn3jo6png3g"]
+
+[ext_resource type="PackedScene" uid="uid://dgh6y0ssm0cmd" path="res://src/actor/calf/calf.tscn" id="1_03qem"]
+[ext_resource type="Script" uid="uid://dsrf7iikgu2gb" path="res://src/actor/calf/characters/earnie.gd" id="2_5u5ga"]
+[ext_resource type="Texture2D" uid="uid://cg578kl6u0lbt" path="res://assets/img/Animals/Cow_Baby/baby brown cow animations sprites.png" id="3_3fc51"]
+[ext_resource type="Resource" uid="uid://xyhif102wh1g" path="res://assets/data/dialogue/earnie/earnie_dialogue_data.tres" id="4_5u5ga"]
+
+[node name="Earnie" unique_id=879439776 instance=ExtResource("1_03qem")]
+script = ExtResource("2_5u5ga")
+
+[node name="Sprite2D" parent="." index="0" unique_id=360605713]
+texture = ExtResource("3_3fc51")
+
+[node name="DialogueNode" parent="." index="4" unique_id=562332893]
+dialogue_data = ExtResource("4_5u5ga")

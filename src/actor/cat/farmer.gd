@@ -9,3 +9,6 @@ func _on_dialogue_node_last_dialogue_entry_reached(sequence_idx: int, entry_idx:
 	if sequence_idx == 0:
 		dialogue_node.set_sequence(1)
 		SignalEvents.quest_notify_objective_completed.emit(0,0)
+	elif sequence_idx == 3:
+		dialogue_node.set_sequence(4)
+		SignalEvents.quest_notify_objective_completed.emit(1,0)

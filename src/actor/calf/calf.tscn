@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dgh6y0ssm0cmd"]
+
+[ext_resource type="PackedScene" uid="uid://bjc5lpk52l24j" path="res://src/actor/actor.tscn" id="1_kytm3"]
+[ext_resource type="Script" uid="uid://bdyxub8y3gxo8" path="res://src/actor/calf/calf.gd" id="2_yjiwf"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kytm3"]
+load_path = "res://.godot/imported/baby light cow animations sprites.png-fbe7c6926eecc2adf2fcf01369dd6ba8.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kytm3"]
+size = Vector2(18, 13)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yjiwf"]
+radius = 3.0
+
+[node name="Calf" unique_id=879439776 instance=ExtResource("1_kytm3")]
+script = ExtResource("2_yjiwf")
+type = 0
+
+[node name="Sprite2D" parent="." index="0" unique_id=360605713]
+texture = SubResource("CompressedTexture2D_kytm3")
+centered = false
+hframes = 8
+vframes = 9
+
+[node name="CollisionShape2D2" parent="InteractionNode" parent_id_path=PackedInt32Array(1808578823) index="0" unique_id=294771808]
+position = Vector2(17, 22.5)
+shape = SubResource("RectangleShape2D_kytm3")
+
+[node name="CollisionShape2D" parent="." index="3" unique_id=97534408]
+position = Vector2(17, 26)
+shape = SubResource("CircleShape2D_yjiwf")

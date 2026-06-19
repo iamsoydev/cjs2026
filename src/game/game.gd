@@ -6,6 +6,7 @@ extends Node
 #  - Progressed it further?
 #  - Now have access to a new part?
 #  - Inform relevent quest listeners
+@onready var pata: Actor = $Pata
 
 var active_quest_idx: int = 0
 var active_quest_obj_idx: int = 0
@@ -34,7 +35,28 @@ var quest := [
 			}
 		]
 	},
+	{
+		'name': 'The Accomplace',
+		'desc': 'Find out who helped steal the wheat',
+		'completed': false,
+		'objectives': [
+			{ # 0
+				'desc': 'Speak to the farmer about the accomplace',
+				'completed': false
+			},
+			{ # 1
+				'desc': 'Speak to Earl, Earnie, Brenda and Barnie',
+				'completed': false
+			},
+			{ # 2
+				'desc': 'Report your findings to the farmer',
+				'completed': false
+			}
+		]
+	},
 ]
+
+var answers: Array[String] = []
 
 func verify_quest_completion(quest_idx: int) -> void:
 	if quest_idx < quest.size():
@@ -51,12 +73,21 @@ func _on_quest_notify_objective_completed(quest_idx: int, quest_obj_idx: int) ->
 			if not o[quest_obj_idx].get('completed'):
 				o[quest_obj_idx].set('completed', true)
 				SignalEvents.quest_objective_completed.emit(quest_idx, quest_obj_idx)
-				print("Objective Completed!")
 				verify_quest_completion(quest_idx)
 
 func _ready() -> void:
 	SignalEvents.interaction_attempted.connect(_on_interaction_attempted)
 	SignalEvents.quest_notify_objective_completed.connect(_on_quest_notify_objective_completed)
+	SignalEvents.ui_dialogue_choice_made.connect(func(choice_text: String):
+		answers.push_back(choice_text)
+		match(choice_text.to_lower()):
+			"bertha": pata.dialogue_node.set_sequence(3)
+			"kyle": pata.dialogue_node.set_sequence(1)
+			"claudia": pata.dialogue_node.set_sequence(4)
+			"hans": pata.dialogue_node.set_sequence(2)
+			_: pata.dialogue_node.set_sequence(0)
+	)
+
 
 
 func _on_interaction_attempted(

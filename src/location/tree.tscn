@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://crxc3343ycvrk"]
+
+[ext_resource type="Script" uid="uid://b150qc0btyr14" path="res://src/location/tree.gd" id="1_3nkil"]
+[ext_resource type="Texture2D" uid="uid://6vg10sx8cv6w" path="res://assets/img/Objects/Tree animations/tree sprites.png" id="1_rgirr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wsgqm"]
+radius = 3.0
+height = 6.0
+
+[node name="Tree" type="Node2D" unique_id=2003986965]
+y_sort_enabled = true
+script = ExtResource("1_3nkil")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1038039694]
+texture = ExtResource("1_rgirr")
+centered = false
+hframes = 12
+vframes = 5
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1544115196]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1106366266]
+position = Vector2(24, 40)
+shape = SubResource("CapsuleShape2D_wsgqm")

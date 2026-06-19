@@ -13,8 +13,11 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") or event.is_action_pressed("ui_accept"):
 		if making_choice:
 			making_choice = false
+			# TODO: Record made choice
 			var dc: DialogueChoice = dialogue_node.get_active_dialogue_entry()
 			dialogue_node.set_sequence(dc.choices[dialogue_choices.get_focused_choice()].next_seq_idx)
+			print(dc.choices[dialogue_choices.get_focused_choice()].text)
+			SignalEvents.ui_dialogue_choice_made.emit(dc.choices[dialogue_choices.get_focused_choice()].text)
 			dialogue = dialogue_node.get_active_dialogue_entry()
 		else:
 			dialogue = dialogue_node.get_next_dialogue_entry()

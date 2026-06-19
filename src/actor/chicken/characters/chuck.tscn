@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bajq284tk4qf2" path="res://src/actor/chicken/chicken.tscn" id="1_qyuyg"]
 [ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="2_ob5xe"]
-[ext_resource type="Script" uid="uid://kyocpdokdmhf" path="res://src/actor/chicken/characters/misguiding_chicken.gd" id="2_u5mb0"]
+[ext_resource type="Script" uid="uid://kyocpdokdmhf" path="res://src/actor/chicken/characters/chuck.gd" id="2_u5mb0"]
 [ext_resource type="Script" uid="uid://df176kirhdwrp" path="res://src/dialogue/dialogue_sequence_data.gd" id="3_u5mb0"]
 [ext_resource type="Script" uid="uid://ctkgw6ik2sd35" path="res://src/dialogue/dialogue_sequence_entry_data.gd" id="5_u5mb0"]
 
@@ -60,7 +60,7 @@ metadata/_custom_type_script = "uid://dxwsx41tr2joe"
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_rxibo"]
 a = Vector2(0, -10.5)
 
-[node name="MisleadingChicken" unique_id=879439776 instance=ExtResource("1_qyuyg")]
+[node name="Chuck" unique_id=879439776 instance=ExtResource("1_qyuyg")]
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("2_u5mb0")

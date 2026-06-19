@@ -4,9 +4,6 @@ extends CharacterBody2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var dialogue_node: DialogueNode = $DialogueNode
 
-@onready var interaction_node: InteractionNode = $InteractionNode
-@onready var interaction_cooldown_timer: Timer = $InteractionCooldownTimer
-
 func _ready() -> void:
 	SignalEvents.quest_objective_completed.connect(_on_quest_objective_completed)
 	SignalEvents.quest_completed.connect(_on_quest_completed)
