@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dtcnpsdv05t60"]
+
+[ext_resource type="Script" uid="uid://bdks7c6cxu3uy" path="res://src/ui/score_summary.gd" id="1_bbmqk"]
+
+[node name="ScoreSummary" type="Control" unique_id=490037773]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bbmqk")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1402293000]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CenterContainer" unique_id=211287227]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Panel" unique_id=1847023602]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/Panel/VBoxContainer" unique_id=2081562292]
+layout_mode = 2
+text = "Score"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer" unique_id=951223812]
+layout_mode = 2
+
+[node name="QuestNameLabel" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer" unique_id=1782210081]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Who Ate the Wheat"
+
+[node name="PassFailLabel" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer" unique_id=999670649]
+layout_mode = 2
+text = "Pass"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/Panel/VBoxContainer" unique_id=924413268]
+layout_mode = 2
+
+[node name="QuestNameLabel" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer2" unique_id=1159005529]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Who is the Accompilace"
+
+[node name="PassFailLabel" type="Label" parent="CenterContainer/Panel/VBoxContainer/HBoxContainer2" unique_id=2010823634]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Pass"
+horizontal_alignment = 2

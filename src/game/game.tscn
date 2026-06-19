@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dxt60seul3ija" path="res://src/game/game.gd" id="1_s6lek"]
 [ext_resource type="Script" uid="uid://degifyk5gr0yv" path="res://src/ui/dialogue/dialogue_control.gd" id="3_kgj8g"]
 [ext_resource type="PackedScene" uid="uid://ct0ext5echnof" path="res://src/ui/dialogue/dialogue_choices.tscn" id="4_l80un"]
+[ext_resource type="PackedScene" uid="uid://dtcnpsdv05t60" path="res://src/ui/score_summary.tscn" id="5_xptat"]
 
 [node name="Game" type="Node" unique_id=2055753430]
 process_mode = 3
@@ -99,3 +100,6 @@ metadata/_edit_group_ = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Name"
+
+[node name="ScoreSummary" parent="UI" unique_id=490037773 instance=ExtResource("5_xptat")]
+visible = false

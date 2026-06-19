@@ -4,6 +4,9 @@ func _on_quest_objective_completed(quest_id: int, quest_objective_id: int) -> vo
 	if quest_id == 0: 
 		if quest_objective_id == 2:
 			dialogue_node.set_sequence(2)
+	elif quest_id == 1:
+		if quest_objective_id == 1:
+			dialogue_node.set_sequence(5)
 
 func _on_dialogue_node_last_dialogue_entry_reached(sequence_idx: int, entry_idx: int) -> void:
 	if sequence_idx == 0:

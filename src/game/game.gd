@@ -8,6 +8,7 @@ extends Node
 #  - Inform relevent quest listeners
 @onready var location: Node2D = $ViewportCanvasLayer/SubViewportContainer/SubViewport/World/Location
 @onready var pata: Actor = location.get_node("Pata")
+@onready var score_summary: ScoreSummary = $UI/ScoreSummary
 
 var quest := [
 	{# 0
@@ -89,9 +90,17 @@ func _ready() -> void:
 				"claudia": pata.dialogue_node.set_sequence(4)
 				"hans": pata.dialogue_node.set_sequence(2)
 				_: pata.dialogue_node.set_sequence(0)
-		elif answers.size() == 2: 
+		elif answers.size() == 2:
+			if answers[0].to_lower() == 'claudia':
+				score_summary.set_quest_result(0, true)
+			else:
+				score_summary.set_quest_result(0, false)
+			if answers[1].to_lower() == 'earl':
+				score_summary.set_quest_result(1, true)
+			else:
+				score_summary.set_quest_result(1, false)
+			score_summary.visible = true
 			# TODO: Introduce Endgame
-			pass
 	)
 
 
