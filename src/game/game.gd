@@ -6,10 +6,8 @@ extends Node
 #  - Progressed it further?
 #  - Now have access to a new part?
 #  - Inform relevent quest listeners
-@onready var pata: Actor = $Pata
-
-var active_quest_idx: int = 0
-var active_quest_obj_idx: int = 0
+@onready var location: Node2D = $ViewportCanvasLayer/SubViewportContainer/SubViewport/World/Location
+@onready var pata: Actor = location.get_node("Pata")
 
 var quest := [
 	{# 0
@@ -56,6 +54,7 @@ var quest := [
 	},
 ]
 
+var active_quest_idx := 0
 var answers: Array[String] = []
 
 func verify_quest_completion(quest_idx: int) -> void:
@@ -65,6 +64,8 @@ func verify_quest_completion(quest_idx: int) -> void:
 				return
 		quest[quest_idx].set('completed', true)
 		SignalEvents.quest_completed.emit(quest_idx)
+		
+		active_quest_idx += 1 if quest.size() > quest_idx+1 else 0
 
 func _on_quest_notify_objective_completed(quest_idx: int, quest_obj_idx: int) -> void:
 	if quest_idx < quest.size():
@@ -78,16 +79,20 @@ func _on_quest_notify_objective_completed(quest_idx: int, quest_obj_idx: int) ->
 func _ready() -> void:
 	SignalEvents.interaction_attempted.connect(_on_interaction_attempted)
 	SignalEvents.quest_notify_objective_completed.connect(_on_quest_notify_objective_completed)
+	# FIXME: Definitely should change the dialogue system to account for this
 	SignalEvents.ui_dialogue_choice_made.connect(func(choice_text: String):
 		answers.push_back(choice_text)
-		match(choice_text.to_lower()):
-			"bertha": pata.dialogue_node.set_sequence(3)
-			"kyle": pata.dialogue_node.set_sequence(1)
-			"claudia": pata.dialogue_node.set_sequence(4)
-			"hans": pata.dialogue_node.set_sequence(2)
-			_: pata.dialogue_node.set_sequence(0)
+		if answers.size() == 1:
+			match(choice_text.to_lower()):
+				"bertha": pata.dialogue_node.set_sequence(3)
+				"kyle": pata.dialogue_node.set_sequence(1)
+				"claudia": pata.dialogue_node.set_sequence(4)
+				"hans": pata.dialogue_node.set_sequence(2)
+				_: pata.dialogue_node.set_sequence(0)
+		elif answers.size() == 2: 
+			# TODO: Introduce Endgame
+			pass
 	)
-
 
 
 func _on_interaction_attempted(

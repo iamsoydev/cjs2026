@@ -32,6 +32,18 @@ func get_active_dialogue_entry() -> Dialogue:
 		d = dialogue_data.get_dialogue(active_seq_idx, active_entry_idx)	
 	return d
 
+# FIXME: This was added so that the dialogue_control can force 
+# the dialogue node to emit a signal with its actuve sequence.
+# Probably want to delete this later.
+func get_active_dialogue_entry_idx() -> int:
+	return active_entry_idx
+
+# FIXME: This was added so that the dialogue_control can force 
+# the dialogue node to emit a signal with its actuve sequence.
+# Probably want to delete this later.
+func get_active_sequence() -> int:
+	return active_seq_idx
+
 func set_sequence(seq_idx: int) -> void:
 	if dialogue_data.sequences.size() > seq_idx:
 		active_seq_idx = seq_idx

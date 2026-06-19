@@ -15,8 +15,9 @@ func _input(event: InputEvent) -> void:
 			making_choice = false
 			# TODO: Record made choice
 			var dc: DialogueChoice = dialogue_node.get_active_dialogue_entry()
+			# FIXME: I shouldn't be doing this to trigger the completion of a quest
+			dialogue_node.last_dialogue_entry_reached.emit(dialogue_node.get_active_sequence(), dialogue_node.get_active_dialogue_entry_idx())
 			dialogue_node.set_sequence(dc.choices[dialogue_choices.get_focused_choice()].next_seq_idx)
-			print(dc.choices[dialogue_choices.get_focused_choice()].text)
 			SignalEvents.ui_dialogue_choice_made.emit(dc.choices[dialogue_choices.get_focused_choice()].text)
 			dialogue = dialogue_node.get_active_dialogue_entry()
 		else:

@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bajq284tk4qf2" path="res://src/actor/chicken/chicken.tscn" id="1_mar8d"]
 [ext_resource type="Script" uid="uid://ev81s3o17l3q" path="res://src/actor/chicken/characters/pata.gd" id="2_dfilw"]
 [ext_resource type="Texture2D" uid="uid://bjk8baebiurdd" path="res://assets/img/Animals/Chicken/chicken blue.png" id="3_ird15"]
+[ext_resource type="Resource" uid="uid://byobc50y3nnu7" path="res://assets/data/dialogue/pata/pata_dialogue_data.tres" id="4_dfilw"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_mar8d"]
 a = Vector2(-22, 10)
@@ -13,6 +14,9 @@ script = ExtResource("2_dfilw")
 
 [node name="Sprite2D" parent="." index="0" unique_id=360605713]
 texture = ExtResource("3_ird15")
+
+[node name="DialogueNode" parent="." index="4" unique_id=562332893]
+dialogue_data = ExtResource("4_dfilw")
 
 [node name="Area2D" type="Area2D" parent="." index="5" unique_id=87931397]
 
