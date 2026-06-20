@@ -1,4 +1,8 @@
 class_name Quest
 extends RefCounted
 
-var quest_data
+enum Event {
+	ON_START,
+	ON_COMPLETE,
+	ON_EVENT
+}

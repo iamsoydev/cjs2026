@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://t21a5u88spho"]
+
+[ext_resource type="Script" uid="uid://70ekqmvj87bl" path="res://src/quest/quest_objective_data.gd" id="1_e1gvm"]
+[ext_resource type="Script" uid="uid://t1e5cgfcm506" path="res://src/quest/quest_data.gd" id="2_b6xy0"]
+
+[sub_resource type="Resource" id="Resource_cvx2y"]
+script = ExtResource("1_e1gvm")
+id = &"ask_farmer_b"
+description = "Speak to the farmer about the accomplice"
+metadata/_custom_type_script = "uid://70ekqmvj87bl"
+
+[sub_resource type="Resource" id="Resource_e1gvm"]
+script = ExtResource("1_e1gvm")
+id = &"question_calfs"
+description = "Speak to Earl, Earnie, Brenda, and Barnie"
+metadata/_custom_type_script = "uid://70ekqmvj87bl"
+
+[sub_resource type="Resource" id="Resource_b6xy0"]
+script = ExtResource("1_e1gvm")
+id = &"accomplice_tell"
+description = "Report your findings back to the farmer"
+metadata/_custom_type_script = "uid://70ekqmvj87bl"
+
+[resource]
+script = ExtResource("2_b6xy0")
+id = &"accomplice"
+name = "The Accomplice"
+description = "Find out who assisted in the crop theft"
+objectives = Array[ExtResource("1_e1gvm")]([SubResource("Resource_cvx2y"), SubResource("Resource_e1gvm"), SubResource("Resource_b6xy0")])
+metadata/_custom_type_script = "uid://t1e5cgfcm506"

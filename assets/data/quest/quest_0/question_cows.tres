@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuestObjectiveData" format=3 uid="uid://dd0jco4yacj0l"]
+
+[ext_resource type="Script" uid="uid://70ekqmvj87bl" path="res://src/quest/quest_objective_data.gd" id="1_x1afr"]
+
+[resource]
+script = ExtResource("1_x1afr")
+id = &"question_cows"
+description = "Speak to Hans, Claudia, and Bertha about what they know about who ate the crop"
+metadata/_custom_type_script = "uid://70ekqmvj87bl"

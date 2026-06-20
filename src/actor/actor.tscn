@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dtmq6xnyinb44" path="res://src/actor/actor.gd" id="1_kidy7"]
 [ext_resource type="Script" uid="uid://bmxrdyryqdcs7" path="res://src/interaction-node/interaction_node.gd" id="2_lxq7m"]
 [ext_resource type="Script" uid="uid://djbls8rymvdps" path="res://src/dialogue/dialogue_node.gd" id="3_pa22y"]
+[ext_resource type="Script" uid="uid://cwnq7x44wuqqr" path="res://src/quest/quest_node.gd" id="4_ggvwv"]
 
 [node name="Actor" type="CharacterBody2D" unique_id=879439776]
 collision_layer = 2
@@ -28,5 +29,10 @@ metadata/_custom_type_script = "uid://bmxrdyryqdcs7"
 script = ExtResource("3_pa22y")
 metadata/_custom_type_script = "uid://djbls8rymvdps"
 
+[node name="QuestNode" type="Node" parent="." unique_id=53470877]
+script = ExtResource("4_ggvwv")
+metadata/_custom_type_script = "uid://cwnq7x44wuqqr"
+
 [connection signal="dialogue_choice_made" from="DialogueNode" to="." method="_on_dialogue_node_dialogue_choice_made"]
 [connection signal="last_dialogue_entry_reached" from="DialogueNode" to="." method="_on_dialogue_node_last_dialogue_entry_reached"]
+[connection signal="quest_event_occured" from="QuestNode" to="." method="_on_quest_node_quest_event_occured"]

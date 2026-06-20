@@ -10,6 +10,10 @@ extends Node
 @onready var pata: Actor = location.get_node("Pata")
 @onready var score_summary: ScoreSummary = $UI/ScoreSummary
 
+# TODO: Create quest object
+# Quest event object
+# Quest objective
+# Quest 
 var quest := [
 	{# 0
 		'name': 'Wheat Eaters',

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="QuestObjectiveData" format=3 uid="uid://bwhoxww7nxc83"]
+
+[ext_resource type="Script" uid="uid://70ekqmvj87bl" path="res://src/quest/quest_objective_data.gd" id="1_826p6"]
+
+[resource]
+script = ExtResource("1_826p6")
+id = &"crop_tell"
+description = "Report your findings back to the farmer"
+metadata/_custom_type_script = "uid://70ekqmvj87bl"
