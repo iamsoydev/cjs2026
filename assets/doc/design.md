@@ -18,6 +18,12 @@ Use this as the overall story.
 How else can we involve misdirection in this
 story.
 
+#### Features to add
+- Randomize Names (From a name list)
+- Randomize Positions (From spawn points)
+- Randomize Character Colours
+
+
 
 The player is an animal whisperer on a farm that is trying to solve a case for a farmer.
 At the end of the game the player sees how they scored on the puzzles. 

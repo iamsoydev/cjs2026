@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://cnjiu6uv3t4iw"]
+
+[ext_resource type="ColorPalette" uid="uid://umfe3n00mg2k" path="res://assets/data/characters/cow_c/cow_c_colour_palette.tres" id="1_qwwga"]
+[ext_resource type="Resource" uid="uid://y7w74luj1lj4" path="res://assets/data/characters/cow_c/dialogue/cow_c_dialogue_data.tres" id="2_u604o"]
+[ext_resource type="Script" uid="uid://t1e5cgfcm506" path="res://src/quest/quest_data.gd" id="3_2ih1s"]
+[ext_resource type="Script" uid="uid://bpksk2806qlpl" path="res://src/characters/character_data.gd" id="4_xsrkd"]
+
+[resource]
+script = ExtResource("4_xsrkd")
+name_pool = Array[String](["Claudia", "Bessie", "Gertie", "Magnolia", "Buttermilk"])
+colour_pool = ExtResource("1_qwwga")
+dialogue = ExtResource("2_u604o")
+metadata/_custom_type_script = "uid://bpksk2806qlpl"

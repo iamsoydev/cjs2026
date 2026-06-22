@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://62nr6kfqd80a" path="res://src/actor/cow/cow.tscn" id="1_wsory"]
 [ext_resource type="Script" uid="uid://cw34w2a6rbadv" path="res://src/actor/cow/characters/claudia.gd" id="2_6lhkj"]
 [ext_resource type="Texture2D" uid="uid://b0bkrk1nes5nn" path="res://assets/img/Animals/Cow/Pink cow animation sprites.png" id="2_ylppk"]
-[ext_resource type="Resource" uid="uid://y7w74luj1lj4" path="res://assets/data/dialogue/claudia/claudia_dialogue_data.tres" id="4_6lhkj"]
+[ext_resource type="Resource" uid="uid://y7w74luj1lj4" path="res://assets/data/characters/cow_c/dialogue/cow_c_dialogue_data.tres" id="4_6lhkj"]
 
 [node name="Claudia" unique_id=1613042671 instance=ExtResource("1_wsory")]
 script = ExtResource("2_6lhkj")

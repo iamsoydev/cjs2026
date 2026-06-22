@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueSequenceEntryData" format=3 uid="uid://072gacp2uxxf"]
+
+[ext_resource type="Script" uid="uid://ctkgw6ik2sd35" path="res://src/dialogue/dialogue_sequence_entry_data.gd" id="1_m21gk"]
+
+[resource]
+script = ExtResource("1_m21gk")
+text = "Yea go over and talk to all of them. I'm sure a cow talking two legger will throw them off into giving themselves away."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"

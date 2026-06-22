@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://byuqhiwu3h73i"]
+
+[ext_resource type="Script" uid="uid://dxwsx41tr2joe" path="res://src/dialogue/dialogue_data.gd" id="1_uu063"]
+[ext_resource type="Script" uid="uid://df176kirhdwrp" path="res://src/dialogue/dialogue_sequence_data.gd" id="2_0k8ef"]
+[ext_resource type="Script" uid="uid://ctkgw6ik2sd35" path="res://src/dialogue/dialogue_sequence_entry_data.gd" id="3_0k8ef"]
+
+[sub_resource type="Resource" id="Resource_6pjta"]
+script = ExtResource("3_0k8ef")
+text = "Kyle? I'm not Kyle... Kyle is my Dad."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_c1lkv"]
+script = ExtResource("3_0k8ef")
+text = "I'm not sure where he is..."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_vdq4s"]
+script = ExtResource("2_0k8ef")
+entries = Array[ExtResource("3_0k8ef")]([SubResource("Resource_6pjta"), SubResource("Resource_c1lkv")])
+metadata/_custom_type_script = "uid://df176kirhdwrp"
+
+[sub_resource type="Resource" id="Resource_kshbj"]
+script = ExtResource("3_0k8ef")
+text = "Kyle is my dad."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_5p4qc"]
+script = ExtResource("2_0k8ef")
+entries = Array[ExtResource("3_0k8ef")]([SubResource("Resource_kshbj")])
+metadata/_custom_type_script = "uid://df176kirhdwrp"
+
+[sub_resource type="Resource" id="Resource_8gc40"]
+script = ExtResource("3_0k8ef")
+text = "I know who did it..."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_jux2e"]
+script = ExtResource("3_0k8ef")
+text = "But my dad told me to never speak to strangers."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_6p0mk"]
+script = ExtResource("2_0k8ef")
+entries = Array[ExtResource("3_0k8ef")]([SubResource("Resource_8gc40"), SubResource("Resource_jux2e")])
+metadata/_custom_type_script = "uid://df176kirhdwrp"
+
+[sub_resource type="Resource" id="Resource_0nv5i"]
+script = ExtResource("3_0k8ef")
+text = "I don't talk to strangers."
+metadata/_custom_type_script = "uid://ctkgw6ik2sd35"
+
+[sub_resource type="Resource" id="Resource_60bwm"]
+script = ExtResource("2_0k8ef")
+entries = Array[ExtResource("3_0k8ef")]([SubResource("Resource_0nv5i")])
+metadata/_custom_type_script = "uid://df176kirhdwrp"
+
+[resource]
+script = ExtResource("1_uu063")
+speaker = "Earl"
+sequences = Array[ExtResource("2_0k8ef")]([SubResource("Resource_vdq4s"), SubResource("Resource_5p4qc"), SubResource("Resource_6p0mk"), SubResource("Resource_60bwm")])
+metadata/_custom_type_script = "uid://dxwsx41tr2joe"

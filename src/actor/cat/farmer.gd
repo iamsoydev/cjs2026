@@ -1,5 +1,27 @@
 extends Actor
 
+func _on_quest_node_quest_event_occured(
+		event_type: Quest.Event, 
+		origin_id: StringName, 
+		msg: Dictionary
+) -> void:
+	if event_type == Quest.Event.ON_START:
+		match(origin_id):
+			&"q0o0_ask_farmer":
+				pass
+			&"q0o3_crop_tell":
+				pass
+	elif event_type == Quest.Event.ON_COMPLETE:
+		match(origin_id):
+			&"q0o0_ask_farmer":
+				pass
+			&"q0o3_crop_tell":
+				pass
+	elif event_type == Quest.Event.ON_ACTOR_EVENT:
+		match(origin_id):
+			_: pass
+
+# TODO: Move this over to _on_quest_node_quest_event_occured
 func _on_quest_objective_completed(quest_id: int, quest_objective_id: int) -> void:
 	if quest_id == 0: 
 		if quest_objective_id == 2:

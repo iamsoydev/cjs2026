@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dgh6y0ssm0cmd" path="res://src/actor/calf/calf.tscn" id="1_mychf"]
 [ext_resource type="Script" uid="uid://b87n65ux1x7vq" path="res://src/actor/calf/characters/barnie.gd" id="2_6ny3p"]
 [ext_resource type="Texture2D" uid="uid://c0ewmokv0s54x" path="res://assets/img/Animals/Cow_Baby/baby purple cow animations sprites.png" id="3_b55i1"]
-[ext_resource type="Resource" uid="uid://dljk6uamanvoi" path="res://assets/data/dialogue/barnie/barnie_dialogue_data.tres" id="4_6ny3p"]
+[ext_resource type="Resource" uid="uid://dljk6uamanvoi" path="res://assets/data/characters/calf_b/dialogue/calf_b_dialogue_data.tres" id="4_6ny3p"]
 
 [node name="Barnie" unique_id=879439776 instance=ExtResource("1_mychf")]
 script = ExtResource("2_6ny3p")

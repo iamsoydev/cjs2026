@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://62nr6kfqd80a" path="res://src/actor/cow/cow.tscn" id="1_7k1r3"]
 [ext_resource type="Script" uid="uid://da66dvl1j5xq0" path="res://src/actor/cow/characters/hans.gd" id="2_7elfe"]
 [ext_resource type="Texture2D" uid="uid://uj0vqttupncw" path="res://assets/img/Animals/Cow/Brown cow animations.png" id="2_21qcx"]
-[ext_resource type="Resource" uid="uid://db5n8t8afqu68" path="res://assets/data/dialogue/hans/hans_dialogue_data.tres" id="4_7elfe"]
+[ext_resource type="Resource" uid="uid://db5n8t8afqu68" path="res://assets/data/characters/cow_d/dialogue/cow_d_dialogue_data.tres" id="4_7elfe"]
 
 [node name="Hans" unique_id=1613042671 instance=ExtResource("1_7k1r3")]
 script = ExtResource("2_7elfe")

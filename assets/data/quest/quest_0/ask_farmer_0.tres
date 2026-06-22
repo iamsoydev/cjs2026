@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="QuestObjectiveData" format=3 uid="uid://cqq0iahjum7hi"]
-
-[ext_resource type="Script" uid="uid://70ekqmvj87bl" path="res://src/quest/quest_objective_data.gd" id="1_s3fwf"]
-
-[resource]
-script = ExtResource("1_s3fwf")
-id = &"ask_farmer_0"
-description = "Speak to the farmer to find out what he needs."
-metadata/_custom_type_script = "uid://70ekqmvj87bl"

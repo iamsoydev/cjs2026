@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="DialogueSequenceEntryData" format=3 uid="uid://desolm5wvvwdl"]
-
-[ext_resource type="Script" uid="uid://ctkgw6ik2sd35" path="res://src/dialogue/dialogue_sequence_entry_data.gd" id="1_3tdx7"]
-
-[resource]
-script = ExtResource("1_3tdx7")
-text = "But what do I know? I'm just a cow. Go let the farmer know who you think it is."
-metadata/_custom_type_script = "uid://ctkgw6ik2sd35"

@@ -1,14 +1,16 @@
 class_name QuestObjectiveData
 extends Resource
 
-# TODO: Provide the ability to define quest events through
-#		exported variables
-
+## A signal emitted from the QuestObjectiveData
 signal quest_objective_started(objective_id: StringName)
 signal quest_objective_completed(objective_id: StringName)
+## A signal that is emitted from the QuestNode of an Actor.
+## actor events go by [quest-obj string]_[actor]_[desc_name]
+signal quest_actor_event_occured(event_name: StringName, msg: Dictionary)
 
 @export var id := &""
 @export_multiline var description: String = ""
+
 var completed := false : set = set_completion
 
 func start() -> void:
