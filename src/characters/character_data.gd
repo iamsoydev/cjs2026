@@ -1,18 +1,17 @@
 class_name CharacterData
 extends Resource
 
-signal colour_changed(new_colour: Color)
-
 var name: String = ""
 var colour: Color = Color.WHITE
 
 @export var name_pool: Array[String] = []
 @export var colour_pool: ColorPalette = ColorPalette.new()
 @export var quest_answer: Dictionary[QuestData, bool] = {}
-@export var spawn_pool: Array[Vector2] = []
 @export var dialogue: DialogueData = DialogueData.new()
 
 func generate_name() -> void:
+	var attempts: int = 0
+	var visited: PackedInt32Array = []
 	if not (name.is_empty() and name_pool.is_empty()):
 		name = name_pool.pick_random()
 
