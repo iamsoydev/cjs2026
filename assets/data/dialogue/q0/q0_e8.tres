@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueEntryData" format=3 uid="uid://djh2korlyw3ib"]
+
+[ext_resource type="Script" uid="uid://bmfqc7s4folyl" path="res://src/dialogue/dialogue_entry_data.gd" id="1_1ohh8"]
+[ext_resource type="Resource" uid="uid://cssg8vm36bisf" path="res://assets/data/characters/farmer/farmer.tres" id="2_tef8b"]
+
+[resource]
+script = ExtResource("1_1ohh8")
+speaker = ExtResource("2_tef8b")
+entry_text = "My livestock have been causing me trouble. They have been quite defiant over the past year. "
+metadata/_custom_type_script = "uid://bmfqc7s4folyl"

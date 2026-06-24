@@ -6,8 +6,6 @@ var colour: Color = Color.WHITE
 
 @export var name_pool: Array[String] = []
 @export var colour_pool: ColorPalette = ColorPalette.new()
-@export var quest_answer: Dictionary[QuestData, bool] = {}
-@export var dialogue: DialogueData = DialogueData.new()
 
 func generate_name() -> void:
 	var attempts: int = 0

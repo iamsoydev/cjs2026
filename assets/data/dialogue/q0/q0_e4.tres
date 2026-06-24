@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueEntryData" format=3 uid="uid://bgtv2mn20wbua"]
+
+[ext_resource type="Script" uid="uid://bmfqc7s4folyl" path="res://src/dialogue/dialogue_entry_data.gd" id="1_w4h4d"]
+[ext_resource type="Resource" uid="uid://cssg8vm36bisf" path="res://assets/data/characters/farmer/farmer.tres" id="2_yjxfb"]
+
+[resource]
+script = ExtResource("1_w4h4d")
+speaker = ExtResource("2_yjxfb")
+entry_text = "Rather young aren't you? When I had requested help I expected someone with more..."
+metadata/_custom_type_script = "uid://bmfqc7s4folyl"

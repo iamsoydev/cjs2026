@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://cssg8vm36bisf"]
+
+[ext_resource type="Script" uid="uid://t1e5cgfcm506" path="res://src/quest/quest_data.gd" id="1_4ikg4"]
+[ext_resource type="Script" uid="uid://bpksk2806qlpl" path="res://src/characters/character_data.gd" id="2_7nvh7"]
+
+[resource]
+script = ExtResource("2_7nvh7")
+name_pool = Array[String](["Brown"])
+metadata/_custom_type_script = "uid://bpksk2806qlpl"

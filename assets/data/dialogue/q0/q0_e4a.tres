@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueEntryData" format=3 uid="uid://b1srjkrk2npu0"]
+
+[ext_resource type="Resource" uid="uid://b1ui4tybqbgy2" path="res://assets/data/dialogue/q0/q0_e5.tres" id="1_4ypuw"]
+[ext_resource type="Script" uid="uid://bmfqc7s4folyl" path="res://src/dialogue/dialogue_entry_data.gd" id="1_asoli"]
+[ext_resource type="Resource" uid="uid://cssg8vm36bisf" path="res://assets/data/characters/farmer/farmer.tres" id="2_4ypuw"]
+
+[resource]
+script = ExtResource("1_asoli")
+speaker = ExtResource("2_4ypuw")
+entry_text = "Experiance."
+next_entry = ExtResource("1_4ypuw")
+metadata/_custom_type_script = "uid://bmfqc7s4folyl"

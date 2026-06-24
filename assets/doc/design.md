@@ -6,6 +6,12 @@ The Instructions are a lie
 
 Make a game out of the stories in Alice in Riddle land
 
+### Story
+You're an animal whisperer trying to uncover the culprit to various 
+cute crimes to report back to the farmer so he can take action against
+them. As you go through the story you slowly unravel the disturbing 
+dyanmic of the barn. 
+
 #### Dialogue system
 - Presentation
 	- name
@@ -22,8 +28,9 @@ story.
 - Randomize Names (From a name list)
 - Randomize Positions (From spawn points)
 - Randomize Character Colours
-
-
+- Have conversations? Is that something we want? (Does the book have conversations?)
+- Cutscenes
+- Events triggered by dialogue (cutscenes, emoticons)
 
 The player is an animal whisperer on a farm that is trying to solve a case for a farmer.
 At the end of the game the player sees how they scored on the puzzles. 

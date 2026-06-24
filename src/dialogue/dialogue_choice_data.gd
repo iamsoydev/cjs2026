@@ -1,4 +1,6 @@
 class_name DialogueChoiceData
-extends DialogueSequenceEntryData
+extends Resource
 
-@export var next_seq_idx: int = 0
+@export var entry_subject: CharacterData
+@export var choice_text: String = ""
+@export var next_dialogue_data: DialogueData
