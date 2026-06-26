@@ -30,15 +30,5 @@ func _on_quest_objective_completed(quest_id: int, quest_objective_id: int) -> vo
 		if quest_objective_id == 1:
 			dialogue_node.set_sequence(5)
 
-func _on_dialogue_node_last_dialogue_entry_reached(sequence_idx: int, entry_idx: int) -> void:
-	if sequence_idx == 0:
-		dialogue_node.set_sequence(1)
-		SignalEvents.quest_notify_objective_completed.emit(0,0)
-	elif sequence_idx == 2:
-		# TODO: Sequence is set through the choice 
-		# This is very confusing and needs to be changed later.
-		#dialogue.dialogue_node.set_sequence(3)
-		SignalEvents.quest_notify_objective_completed.emit(0,3)
-	elif sequence_idx == 3:
-		dialogue_node.set_sequence(4)
-		SignalEvents.quest_notify_objective_completed.emit(1,0)
+func _on_dialogue_node_dialogue_entry_reached(dialogue_id: StringName, entry_idx: int) -> void:
+	print(dialogue_id + " " + str(entry_idx))
