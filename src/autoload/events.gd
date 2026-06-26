@@ -6,16 +6,11 @@ enum Type {
 }
 
 signal ui_dialogue_visibility_change_requested(is_visible: bool)
-signal ui_dialogue_present_requested(dialogue_npath: NodePath)
+signal ui_dialogue_present_requested(dialogue_data: DialogueData)
 signal ui_dialogue_present_ended
 signal ui_dialogue_end_requested
 signal ui_dialogue_next_segment_requested
 signal ui_dialogue_choice_made(choice_text: String)
-
-
-signal dialogue_entry_entered
-signal dialogue_entry_left
-signal dialogue_entry_event_occured
 
 signal dialogue_initiated(dialogue_node_npath: NodePath)
 

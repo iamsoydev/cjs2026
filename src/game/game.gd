@@ -87,7 +87,7 @@ func _ready() -> void:
 	# FIXME: Definitely should change the dialogue system to account for this
 	SignalEvents.ui_dialogue_choice_made.connect(func(choice_text: String):
 		answers.push_back(choice_text)
-		if answers.size() == 1:
+	if answers.size() == 1:
 			match(choice_text.to_lower()):
 				"bertha": pata.dialogue_node.set_sequence(3)
 				"kyle": pata.dialogue_node.set_sequence(1)

@@ -25,7 +25,7 @@ metadata/_custom_type_script = "uid://bmxrdyryqdcs7"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97534408]
 
-[node name="DialogueNode" type="Node" parent="." unique_id=562332893]
+[node name="DialogueNode" type="Node" parent="." unique_id=562332893 groups=["dialogue_nodes"]]
 script = ExtResource("3_pa22y")
 metadata/_custom_type_script = "uid://djbls8rymvdps"
 
@@ -33,6 +33,6 @@ metadata/_custom_type_script = "uid://djbls8rymvdps"
 script = ExtResource("4_ggvwv")
 metadata/_custom_type_script = "uid://cwnq7x44wuqqr"
 
-[connection signal="dialogue_choice_made" from="DialogueNode" to="." method="_on_dialogue_node_dialogue_choice_made"]
-[connection signal="last_dialogue_entry_reached" from="DialogueNode" to="." method="_on_dialogue_node_last_dialogue_entry_reached"]
+[connection signal="dialogue_entry_reached" from="DialogueNode" to="." method="_on_dialogue_node_dialogue_entry_reached"]
+[connection signal="dialogue_last_entry_reached" from="DialogueNode" to="." method="_on_dialogue_node_dialogue_last_entry_reached"]
 [connection signal="quest_event_occured" from="QuestNode" to="." method="_on_quest_node_quest_event_occured"]

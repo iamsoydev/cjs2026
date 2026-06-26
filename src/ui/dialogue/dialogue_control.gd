@@ -5,6 +5,7 @@ extends Control
 @onready var dialogue_choices: DialogueChoices = $CenterContainer/DialoguePanelContainer/MarginContainer/VBoxContainer/DialogueChoices
 
 var dialogue_node: DialogueNode = null
+var dialogue_data: DialogeData = null
 
 var making_choice := false
 
