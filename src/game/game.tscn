@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cn46487meu4nl" path="res://src/location/location.tscn" id="1_qnjlk"]
 [ext_resource type="Script" uid="uid://dxt60seul3ija" path="res://src/game/game.gd" id="1_s6lek"]
-[ext_resource type="Script" uid="uid://degifyk5gr0yv" path="res://src/ui/dialogue/dialogue_control.gd" id="3_kgj8g"]
+[ext_resource type="Script" uid="uid://degifyk5gr0yv" path="res://src/ui/dialogue/ui_dialogue_control.gd" id="3_kgj8g"]
 [ext_resource type="PackedScene" uid="uid://ct0ext5echnof" path="res://src/ui/dialogue/dialogue_choices.tscn" id="4_l80un"]
 [ext_resource type="PackedScene" uid="uid://dtcnpsdv05t60" path="res://src/ui/score_summary.tscn" id="5_xptat"]
 
@@ -31,8 +31,7 @@ texture_filter = 1
 [node name="UI" type="CanvasLayer" parent="." unique_id=604954271]
 process_mode = 2
 
-[node name="RootControl" type="Control" parent="UI" unique_id=1867943370]
-visible = false
+[node name="UIRootControl" type="Control" parent="UI" unique_id=1867943370]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,7 +39,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="DialogueControl" type="Control" parent="UI/RootControl" unique_id=191184350]
+[node name="UIDialogueControl" type="Control" parent="UI/UIRootControl" unique_id=191184350]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -49,7 +49,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_kgj8g")
 
-[node name="CenterContainer" type="CenterContainer" parent="UI/RootControl/DialogueControl" unique_id=1901877490]
+[node name="CenterContainer" type="CenterContainer" parent="UI/UIRootControl/UIDialogueControl" unique_id=1901877490]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.65000004
@@ -59,32 +59,32 @@ offset_top = -1.5258789e-05
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="DialoguePanelContainer" type="PanelContainer" parent="UI/RootControl/DialogueControl/CenterContainer" unique_id=746431963]
+[node name="DialoguePanelContainer" type="PanelContainer" parent="UI/UIRootControl/UIDialogueControl/CenterContainer" unique_id=746431963]
 custom_minimum_size = Vector2(600, 100)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="UI/RootControl/DialogueControl/CenterContainer/DialoguePanelContainer" unique_id=751035651]
+[node name="MarginContainer" type="MarginContainer" parent="UI/UIRootControl/UIDialogueControl/CenterContainer/DialoguePanelContainer" unique_id=751035651]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/RootControl/DialogueControl/CenterContainer/DialoguePanelContainer/MarginContainer" unique_id=1846086693]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/UIRootControl/UIDialogueControl/CenterContainer/DialoguePanelContainer/MarginContainer" unique_id=1846086693]
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="UI/RootControl/DialogueControl/CenterContainer/DialoguePanelContainer/MarginContainer/VBoxContainer" unique_id=1439198377]
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/UIRootControl/UIDialogueControl/CenterContainer/DialoguePanelContainer/MarginContainer/VBoxContainer" unique_id=1439198377]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 20
 text = "This is dialogue"
 
-[node name="DialogueChoices" parent="UI/RootControl/DialogueControl/CenterContainer/DialoguePanelContainer/MarginContainer/VBoxContainer" unique_id=1728507655 instance=ExtResource("4_l80un")]
+[node name="DialogueChoices" parent="UI/UIRootControl/UIDialogueControl/CenterContainer/DialoguePanelContainer/MarginContainer/VBoxContainer" unique_id=1728507655 instance=ExtResource("4_l80un")]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Panel" type="PanelContainer" parent="UI/RootControl/DialogueControl" unique_id=1682977078]
+[node name="Panel" type="PanelContainer" parent="UI/UIRootControl/UIDialogueControl" unique_id=1682977078]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.032
@@ -97,7 +97,7 @@ offset_right = -478.24
 offset_bottom = -0.16000366
 metadata/_edit_group_ = true
 
-[node name="SpeakerNameLabel" type="Label" parent="UI/RootControl/DialogueControl/Panel" unique_id=306383115]
+[node name="SpeakerNameLabel" type="Label" parent="UI/UIRootControl/UIDialogueControl/Panel" unique_id=306383115]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Name"

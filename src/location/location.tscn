@@ -6,17 +6,7 @@
 [ext_resource type="TileSet" uid="uid://cslb2otl245h8" path="res://assets/data/tilesets/embellishment_tileset.tres" id="4_qwc71"]
 [ext_resource type="PackedScene" uid="uid://viqctij371mf" path="res://src/player/player.tscn" id="5_atm4g"]
 [ext_resource type="PackedScene" uid="uid://crxc3343ycvrk" path="res://src/location/tree.tscn" id="5_njc07"]
-[ext_resource type="PackedScene" uid="uid://c6sa77vt3ijeo" path="res://src/actor/cow/characters/bertha.tscn" id="5_uiitm"]
-[ext_resource type="PackedScene" uid="uid://dyhrxjocfejuo" path="res://src/actor/cow/characters/claudia.tscn" id="6_lc0gu"]
-[ext_resource type="PackedScene" uid="uid://vghwch7fco1l" path="res://src/actor/cow/characters/hans.tscn" id="7_hthb8"]
-[ext_resource type="PackedScene" uid="uid://dewby74v6uunw" path="res://src/actor/cow/characters/kyle.tscn" id="8_lc0gu"]
-[ext_resource type="PackedScene" uid="uid://b7xxand28q6ub" path="res://src/actor/cat/farmer.tscn" id="10_hthb8"]
-[ext_resource type="PackedScene" uid="uid://bod8bon0o5ow0" path="res://src/actor/chicken/characters/chuck.tscn" id="11_50g1t"]
-[ext_resource type="PackedScene" uid="uid://d008i7s6sikl8" path="res://src/actor/calf/characters/earl.tscn" id="13_8un21"]
-[ext_resource type="PackedScene" uid="uid://besn3jo6png3g" path="res://src/actor/calf/characters/earnie.tscn" id="14_hjaar"]
-[ext_resource type="PackedScene" uid="uid://mdbsui48ym0e" path="res://src/actor/calf/characters/brenda.tscn" id="15_wip50"]
-[ext_resource type="PackedScene" uid="uid://b38jht8vv8nl7" path="res://src/actor/calf/characters/barnie.tscn" id="16_pybbb"]
-[ext_resource type="PackedScene" uid="uid://5eefqi5uos4u" path="res://src/actor/chicken/characters/pata.tscn" id="17_hjaar"]
+[ext_resource type="PackedScene" uid="uid://b7xxand28q6ub" path="res://src/actor/farmer/farmer.tscn" id="10_hthb8"]
 
 [node name="Location" type="Node2D" unique_id=2032249075]
 y_sort_enabled = true
@@ -114,22 +104,6 @@ type = 1
 [node name="Characters" type="Node2D" parent="." unique_id=380100265]
 y_sort_enabled = true
 
-[node name="Bertha" parent="." unique_id=1613042671 instance=ExtResource("5_uiitm")]
-y_sort_enabled = true
-position = Vector2(480, 19)
-
-[node name="Claudia" parent="." unique_id=1045661098 instance=ExtResource("6_lc0gu")]
-y_sort_enabled = true
-position = Vector2(522, 2)
-
-[node name="Hans" parent="." unique_id=1809184823 instance=ExtResource("7_hthb8")]
-y_sort_enabled = true
-position = Vector2(560, 14)
-
-[node name="Kyle" parent="." unique_id=1503338810 instance=ExtResource("8_lc0gu")]
-y_sort_enabled = true
-position = Vector2(482, 89)
-
 [node name="Player" parent="." unique_id=45565635 instance=ExtResource("5_atm4g")]
 y_sort_enabled = true
 position = Vector2(269, 229)
@@ -144,28 +118,3 @@ limit_enabled = false
 [node name="Farmer" parent="." unique_id=879439776 instance=ExtResource("10_hthb8")]
 y_sort_enabled = true
 position = Vector2(241, 210)
-
-[node name="MisleadingChicken" parent="." unique_id=85002061 instance=ExtResource("11_50g1t")]
-y_sort_enabled = true
-position = Vector2(345, 258)
-
-[node name="Earl" parent="." unique_id=1744248153 instance=ExtResource("13_8un21")]
-y_sort_enabled = true
-position = Vector2(347, 321)
-
-[node name="Earnie" parent="." unique_id=1853454560 instance=ExtResource("14_hjaar")]
-y_sort_enabled = true
-position = Vector2(348, 384)
-
-[node name="Brenda" parent="." unique_id=1353374954 instance=ExtResource("15_wip50")]
-y_sort_enabled = true
-position = Vector2(342, 354)
-
-[node name="Barnie" parent="." unique_id=257904691 instance=ExtResource("16_pybbb")]
-y_sort_enabled = true
-position = Vector2(375, 365)
-
-[node name="Pata" parent="." unique_id=1174362136 instance=ExtResource("17_hjaar")]
-unique_name_in_owner = true
-y_sort_enabled = true
-position = Vector2(409, 290)

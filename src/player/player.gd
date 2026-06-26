@@ -3,22 +3,23 @@ extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $Sprite2D/AnimationPlayer
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
 
+@export var character_data: CharacterData
+
 var movement_dir := Vector2.ZERO
 
 func _ready() -> void:
-	add_to_group("player")
-	SignalEvents.player_enable_interaction_requested.connect( func(): ray_cast_2d.enabled = true)
-	SignalEvents.player_disable_interaction_requested.connect( func(): ray_cast_2d.enabled = false)
+	character_data.generate_name()
+	SignalEvents.interaction_started.connect(func():
+		ray_cast_2d.enabled = false
+	)
+	SignalEvents.interaction_finished.connect(func():
+		await get_tree().create_timer(0.5).timeout
+		ray_cast_2d.enabled = true
+	)
 
 func _physics_process(delta: float) -> void:
 		velocity = movement_dir * 65
 		move_and_slide()
-
-func enabled_interaction() -> void:
-	ray_cast_2d.enabled = true
-
-func disable_interaction() -> void:
-	ray_cast_2d.enabled = false
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):

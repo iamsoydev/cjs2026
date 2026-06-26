@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="DialogueSequenceEntryData" format=3 uid="uid://cy5wm2mw3ouna"]
-
-[ext_resource type="Script" uid="uid://ctkgw6ik2sd35" path="res://src/dialogue/dialogue_sequence_entry_data.gd" id="1_i2a0q"]
-
-[resource]
-script = ExtResource("1_i2a0q")
-text = "You must be the the barn whisperer I called for. Just when I need you too."
-metadata/_custom_type_script = "uid://ctkgw6ik2sd35"

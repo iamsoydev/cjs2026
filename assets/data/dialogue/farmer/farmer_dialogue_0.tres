@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://b3ggyp0osinu3"]
+
+[ext_resource type="Resource" uid="uid://b4flhts1dqjdq" path="res://assets/data/dialogue/farmer/d0e0.tres" id="1_ycdol"]
+[ext_resource type="Script" uid="uid://ylrcis4cj76p" path="res://src/dialogue/dialogue_data.gd" id="2_7e4ny"]
+
+[resource]
+script = ExtResource("2_7e4ny")
+dialogue_id = &"d0"
+dialogue_root = ExtResource("1_ycdol")

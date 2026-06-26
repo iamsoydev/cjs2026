@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DialogueEntryData" format=3 uid="uid://bapfuidpggew1"]
+
+[ext_resource type="Script" uid="uid://bmfqc7s4folyl" path="res://src/dialogue/dialogue_entry_data.gd" id="1_2gbal"]
+[ext_resource type="Resource" uid="uid://lv3lnrynv0jh" path="res://assets/data/dialogue/farmer/d0e2.tres" id="1_ggjj3"]
+[ext_resource type="Resource" uid="uid://b0lpetg0dy55y" path="res://assets/data/characters/player/player.tres" id="2_2gbal"]
+
+[resource]
+script = ExtResource("1_2gbal")
+speaker = ExtResource("2_2gbal")
+entry_text = "Uh... hello {{farmer}}?"
+next_entry = ExtResource("1_ggjj3")
+metadata/_custom_type_script = "uid://bmfqc7s4folyl"

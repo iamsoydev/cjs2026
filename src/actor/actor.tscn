@@ -19,6 +19,9 @@ script = ExtResource("1_kidy7")
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("2_lxq7m")
+interaction_targets = Dictionary[String, NodePath]({
+"dialogue": NodePath("../DialogueNode")
+})
 metadata/_custom_type_script = "uid://bmxrdyryqdcs7"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractionNode" unique_id=294771808]

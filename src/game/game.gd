@@ -7,13 +7,14 @@ extends Node
 #  - Now have access to a new part?
 #  - Inform relevent quest listeners
 @onready var location: Node2D = $ViewportCanvasLayer/SubViewportContainer/SubViewport/World/Location
-@onready var pata: Actor = location.get_node("Pata")
 @onready var score_summary: ScoreSummary = $UI/ScoreSummary
-
+@onready var ui_root_control: Control = $UI/UIRootControl
+@onready var ui_dialogue_control: UIDialogueControl = $UI/UIRootControl/UIDialogueControl
 # TODO: Create quest object
 # Quest event object
 # Quest objective
 # Quest 
+
 var quest := [
 	{# 0
 		'name': 'Wheat Eaters',
@@ -81,52 +82,61 @@ func _on_quest_notify_objective_completed(quest_idx: int, quest_obj_idx: int) ->
 				SignalEvents.quest_objective_completed.emit(quest_idx, quest_obj_idx)
 				verify_quest_completion(quest_idx)
 
+func start_ui() -> void:
+	get_tree().paused = true
+	ui_root_control.set_process_input(true)
+
+func end_ui() -> void:
+	get_tree().paused = false
+	ui_root_control.set_process_input(false)
+
+func start_dialogue(dialogue_root: DialogueEntryData) -> void:
+	var dialogue := dialogue_root
+	ui_dialogue_control.visible = true
+	while(dialogue):
+		dialogue.dialogue_entry_reached.emit()
+		ui_dialogue_control.present_dialogue(dialogue)
+		await ui_dialogue_control.next_dialogue_requested
+		dialogue = dialogue.next_entry
+	ui_dialogue_control.visible = false
+	# TODO: Emit when dialogue ends?
+
+func _on_interaction_occured(interaction_target_npath: NodePath):
+	var target := get_node_or_null(interaction_target_npath)
+	if target and target is DialogueNode:
+		SignalEvents.interaction_started.emit()
+		start_ui()
+		await start_dialogue(target.dialogue_data.dialogue_root)
+		end_ui()
+		SignalEvents.interaction_finished.emit()
+
+
 func _ready() -> void:
-	SignalEvents.interaction_attempted.connect(_on_interaction_attempted)
-	SignalEvents.quest_notify_objective_completed.connect(_on_quest_notify_objective_completed)
-	# FIXME: Definitely should change the dialogue system to account for this
-	SignalEvents.ui_dialogue_choice_made.connect(func(choice_text: String):
-		answers.push_back(choice_text)
-	if answers.size() == 1:
-			match(choice_text.to_lower()):
-				"bertha": pata.dialogue_node.set_sequence(3)
-				"kyle": pata.dialogue_node.set_sequence(1)
-				"claudia": pata.dialogue_node.set_sequence(4)
-				"hans": pata.dialogue_node.set_sequence(2)
-				_: pata.dialogue_node.set_sequence(0)
-		elif answers.size() == 2:
-			if answers[0].to_lower() == 'claudia':
-				score_summary.set_quest_result(0, true)
-			else:
-				score_summary.set_quest_result(0, false)
-			if answers[1].to_lower() == 'earl':
-				score_summary.set_quest_result(1, true)
-			else:
-				score_summary.set_quest_result(1, false)
-			score_summary.visible = true
-			# TODO: Introduce Endgame
-	)
+	for inode in get_tree().get_nodes_in_group("interaction_nodes"):
+		if inode is InteractionNode:
+			inode.interaction_occured.connect(_on_interaction_occured)
+	
 
-
-func _on_interaction_attempted(
-	type: InteractionNode.InteractionType,
-	interacted_npath: NodePath,
-	interacting_npath: NodePath
-) -> void:
-		var interacted_node: Node = get_node_or_null(interacted_npath)
-		var interacting_node: Node = get_node_or_null(interacting_npath)
-
-		var dialogue_node: DialogueNode
-		var player_ray_cast_2d: RayCast2D
-		if interacted_node:
-			if interacted_node.has_node("DialogueNode"):
-				dialogue_node = interacted_node.get_node("DialogueNode")
-		if interacting_node:
-			if interacting_node.has_node("RayCast2D"):
-				player_ray_cast_2d = interacting_node.get_node("RayCast2D")
-
-		player_ray_cast_2d.enabled = false
-		SignalEvents.ui_dialogue_present_requested.emit(dialogue_node.get_path())
-		await SignalEvents.ui_dialogue_present_ended
-		await get_tree().create_timer(0.1).timeout
-		player_ray_cast_2d.enabled = true
+	## FIXME: Definitely should change the dialogue system to account for this
+	#SignalEvents.ui_dialogue_choice_made.connect(func(choice_text: String):
+		#answers.push_back(choice_text))
+#
+	#if answers.size() == 1:
+		#pass
+		##match(choice_text.to_lower()):
+			##"bertha": pata.dialogue_node.set_sequence(3)
+			##"kyle": pata.dialogue_node.set_sequence(1)
+			##"claudia": pata.dialogue_node.set_sequence(4)
+			##"hans": pata.dialogue_node.set_sequence(2)
+			##_: pata.dialogue_node.set_sequence(0)
+	#elif answers.size() == 2:
+		#if answers[0].to_lower() == 'claudia':
+			#score_summary.set_quest_result(0, true)
+		#else:
+			#score_summary.set_quest_result(0, false)
+		#if answers[1].to_lower() == 'earl':
+			#score_summary.set_quest_result(1, true)
+		#else:
+			#score_summary.set_quest_result(1, false)
+		#score_summary.visible = true
+		# TODO: Introduce Endgame

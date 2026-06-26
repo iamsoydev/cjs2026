@@ -8,24 +8,30 @@
 class_name DialogueNode
 extends Node
 
+# FIXME: This should probably be inherited from an abstract class
+signal interaction_result_triggered(npath: NodePath)
+
 signal dialogue_last_entry_reached(dialogue_id: StringName, entry_idx: int)
 signal dialogue_entry_reached(dialogue_id: StringName, entry_idx: int)
 signal dialogue_choice_made(dialogue_id: StringName, entry_idx: int, choice_data: String)
 signal dialogue_present_requested(dialogue_data: DialogueData)
 
-@export var dialogue_data: DialogueData = null : set = set_dialogue_data
+@export var dialogue_data: DialogueData = null #: set = set_dialogue_data
 #@onready var active_entry: DialogueEntryData
 
 var _signal_emit_funcs: Array[Callable] = []
 #var _signal_discon_funcs: Array[Callable] = []
 
-func set_dialogue_data(data: DialogueData) -> void:
-	if not _signal_emit_funcs.is_empty(): 
-		#_signal_discon_funcs.all(call)
-		_signal_emit_funcs.clear()
-	dialogue_data = data
-
+func _ready() -> void:
 	_setup_signal_conn(0, dialogue_data.dialogue_id, dialogue_data.dialogue_root)
+
+#func set_dialogue_data(data: DialogueData) -> void:
+	#if not _signal_emit_funcs.is_empty(): 
+		##_signal_discon_funcs.all(call)
+		#_signal_emit_funcs.clear()
+	#dialogue_data = data
+#
+	#_setup_signal_conn(0, dialogue_data.dialogue_id, dialogue_data.dialogue_root)
 
 func present_dialogue() -> void:
 	dialogue_present_requested.emit(dialogue_data)
@@ -33,19 +39,20 @@ func present_dialogue() -> void:
 func _setup_signal_conn(idx: int, id: StringName, dialogue_entry: DialogueEntryData) -> void:
 	if not dialogue_entry: return
 	
+	_signal_emit_funcs.resize(_signal_emit_funcs.size()+1)
 	if dialogue_entry.next_entry:
-		_setup_signal_conn(idx+1, id, dialogue_entry.next_antry)
+		_setup_signal_conn(idx+1, id, dialogue_entry.next_entry)
 		if dialogue_entry is DialogueChoiceEntryData:
-			_signal_emit_funcs.set(idx, func(choice_data: String):
+			_signal_emit_funcs.push_front( func(choice_data: String):
 				dialogue_entry_reached.emit(id, idx)
 				# TODO: How do we want to deal with dialogue choices?
 				# When they concern particular characters?1
 				dialogue_choice_made.emit(id, idx, choice_data))
 		else:
-			_signal_emit_funcs.set(idx, func():
+			_signal_emit_funcs.push_front( func():
 				dialogue_entry_reached.emit(id, idx))
 	else:
-		_signal_emit_funcs.set(idx, func():
+		_signal_emit_funcs.push_front(func():
 			dialogue_entry_reached.emit(id, idx)
 			dialogue_last_entry_reached.emit(id, idx))
 

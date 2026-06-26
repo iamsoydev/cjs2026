@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://01vr7jeuwame"]
 
 [ext_resource type="Script" uid="uid://t1e5cgfcm506" path="res://src/quest/quest_data.gd" id="1_17nnl"]
-[ext_resource type="Script" uid="uid://bpksk2806qlpl" path="res://src/characters/character_data.gd" id="2_4pyoh"]
+[ext_resource type="Script" uid="uid://bpksk2806qlpl" path="res://src/character-data/character_data.gd" id="2_4pyoh"]
 
 [resource]
 script = ExtResource("2_4pyoh")

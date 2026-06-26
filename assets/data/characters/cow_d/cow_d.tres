@@ -3,7 +3,7 @@
 [ext_resource type="ColorPalette" uid="uid://ceyaxxyj57r05" path="res://assets/data/characters/cow_d/cow_d_colour_palette.tres" id="1_u1hnn"]
 [ext_resource type="Resource" uid="uid://db5n8t8afqu68" path="res://assets/data/characters/cow_d/dialogue/cow_d_dialogue_data.tres" id="2_53fgt"]
 [ext_resource type="Script" uid="uid://t1e5cgfcm506" path="res://src/quest/quest_data.gd" id="3_8ydr4"]
-[ext_resource type="Script" uid="uid://bpksk2806qlpl" path="res://src/characters/character_data.gd" id="4_i657j"]
+[ext_resource type="Script" uid="uid://bpksk2806qlpl" path="res://src/character-data/character_data.gd" id="4_i657j"]
 
 [resource]
 script = ExtResource("4_i657j")

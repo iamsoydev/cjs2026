@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://t1e5cgfcm506" path="res://src/quest/quest_data.gd" id="1_630ge"]
 [ext_resource type="ColorPalette" uid="uid://rqg1ctw4by0b" path="res://assets/data/characters/calf_b/calf_b_colour_palette.tres" id="1_qqgqj"]
-[ext_resource type="Script" uid="uid://bpksk2806qlpl" path="res://src/characters/character_data.gd" id="2_q7ow5"]
+[ext_resource type="Script" uid="uid://bpksk2806qlpl" path="res://src/character-data/character_data.gd" id="2_q7ow5"]
 [ext_resource type="Resource" uid="uid://dljk6uamanvoi" path="res://assets/data/characters/calf_b/dialogue/calf_b_dialogue_data.tres" id="2_qnmcp"]
 
 [resource]

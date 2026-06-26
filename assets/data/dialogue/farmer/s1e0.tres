@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="DialogueSequenceEntryData" format=3 uid="uid://l024qb33b71u"]
-
-[ext_resource type="Script" uid="uid://ctkgw6ik2sd35" path="res://src/dialogue/dialogue_sequence_entry_data.gd" id="1_nhgm1"]
-
-[resource]
-script = ExtResource("1_nhgm1")
-text = "Have you talked to Kyle yet? He's either in the north east corner or south west corner of the farm."
-metadata/_custom_type_script = "uid://ctkgw6ik2sd35"

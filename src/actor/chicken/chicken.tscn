@@ -26,3 +26,5 @@ shape = SubResource("RectangleShape2D_2inii")
 [node name="CollisionShape2D" parent="." index="3" unique_id=97534408]
 position = Vector2(-2, 3)
 shape = SubResource("CircleShape2D_203j0")
+
+[node name="QuestNode" parent="." index="5" unique_id=53470877 groups=["dialogue_nodes"]]
