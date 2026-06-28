@@ -19,6 +19,7 @@ config/icon="uid://3ir38nw6lxj3"
 [autoload]
 
 SignalEvents="*uid://rlsilt5uvyhm"
+CharacterDB="*uid://brwmg85di60tw"
 
 [display]
 

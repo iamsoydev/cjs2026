@@ -1,41 +1,30 @@
 [gd_scene format=3 uid="uid://bjc5lpk52l24j"]
 
-[ext_resource type="Script" uid="uid://dtmq6xnyinb44" path="res://src/actor/actor.gd" id="1_kidy7"]
 [ext_resource type="Script" uid="uid://bmxrdyryqdcs7" path="res://src/interaction-node/interaction_node.gd" id="2_lxq7m"]
 [ext_resource type="Script" uid="uid://djbls8rymvdps" path="res://src/dialogue/dialogue_node.gd" id="3_pa22y"]
-[ext_resource type="Script" uid="uid://cwnq7x44wuqqr" path="res://src/quest/quest_node.gd" id="4_ggvwv"]
 
-[node name="Actor" type="CharacterBody2D" unique_id=879439776]
-collision_layer = 2
+[node name="Actor" type="CharacterBody2D" unique_id=1050637742]
+collision_layer = 8
 collision_mask = 0
-motion_mode = 1
-script = ExtResource("1_kidy7")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=360605713]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=661721158]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1896942362]
-
-[node name="InteractionNode" type="Area2D" parent="." unique_id=1808578823]
+[node name="InteractionNode" type="Area2D" parent="." unique_id=2096087423]
+position = Vector2(20, 20)
 collision_layer = 4
-collision_mask = 4
+collision_mask = 0
 script = ExtResource("2_lxq7m")
-interaction_targets = Dictionary[String, NodePath]({
-"dialogue": NodePath("../DialogueNode")
-})
 metadata/_custom_type_script = "uid://bmxrdyryqdcs7"
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractionNode" unique_id=294771808]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionNode" unique_id=2068561075]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97534408]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=13266051]
 
-[node name="DialogueNode" type="Node" parent="." unique_id=562332893 groups=["dialogue_nodes"]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1161011342]
+
+[node name="DialogueNode" type="Node" parent="." unique_id=1340886665]
 script = ExtResource("3_pa22y")
 metadata/_custom_type_script = "uid://djbls8rymvdps"
 
-[node name="QuestNode" type="Node" parent="." unique_id=53470877]
-script = ExtResource("4_ggvwv")
-metadata/_custom_type_script = "uid://cwnq7x44wuqqr"
-
 [connection signal="dialogue_entry_reached" from="DialogueNode" to="." method="_on_dialogue_node_dialogue_entry_reached"]
 [connection signal="dialogue_last_entry_reached" from="DialogueNode" to="." method="_on_dialogue_node_dialogue_last_entry_reached"]
-[connection signal="quest_event_occured" from="QuestNode" to="." method="_on_quest_node_quest_event_occured"]

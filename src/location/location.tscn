@@ -6,7 +6,7 @@
 [ext_resource type="TileSet" uid="uid://cslb2otl245h8" path="res://assets/data/tilesets/embellishment_tileset.tres" id="4_qwc71"]
 [ext_resource type="PackedScene" uid="uid://viqctij371mf" path="res://src/player/player.tscn" id="5_atm4g"]
 [ext_resource type="PackedScene" uid="uid://crxc3343ycvrk" path="res://src/location/tree.tscn" id="5_njc07"]
-[ext_resource type="PackedScene" uid="uid://b7xxand28q6ub" path="res://src/actor/farmer/farmer.tscn" id="10_hthb8"]
+[ext_resource type="PackedScene" uid="uid://bpoh4uti8tkg7" path="res://src/actor/actors/farmer.tscn" id="7_nhnyp"]
 
 [node name="Location" type="Node2D" unique_id=2032249075]
 y_sort_enabled = true
@@ -104,17 +104,16 @@ type = 1
 [node name="Characters" type="Node2D" parent="." unique_id=380100265]
 y_sort_enabled = true
 
-[node name="Player" parent="." unique_id=45565635 instance=ExtResource("5_atm4g")]
+[node name="Player" parent="Characters" unique_id=45565635 instance=ExtResource("5_atm4g")]
 y_sort_enabled = true
 position = Vector2(269, 229)
 metadata/_edit_group_ = true
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1567105029]
+[node name="Camera2D" type="Camera2D" parent="Characters/Player" unique_id=1567105029]
 offset = Vector2(-125, -50)
 anchor_mode = 0
 zoom = Vector2(2, 2)
 limit_enabled = false
 
-[node name="Farmer" parent="." unique_id=879439776 instance=ExtResource("10_hthb8")]
-y_sort_enabled = true
-position = Vector2(241, 210)
+[node name="Farmer" parent="Characters" unique_id=1050637742 instance=ExtResource("7_nhnyp")]
+position = Vector2(235, 216)

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://bfg0auw5ew0m"]
+
+[ext_resource type="Script" uid="uid://ylrcis4cj76p" path="res://src/dialogue/dialogue_data.gd" id="1_7nvh7"]
+[ext_resource type="Script" uid="uid://bmfqc7s4folyl" path="res://src/dialogue/dialogue_entry_data.gd" id="2_qowbj"]
+[ext_resource type="Script" uid="uid://bpksk2806qlpl" path="res://src/character-data/character_data.gd" id="3_6cml4"]
+
+[sub_resource type="Resource" id="Resource_nhnyp"]
+script = ExtResource("2_qowbj")
+speaker_alias = &"player"
+entry_text = "Hi {{farmer}}! My name is {{player}}!"
+metadata/_custom_type_script = "uid://bmfqc7s4folyl"
+
+[sub_resource type="Resource" id="Resource_lc2j6"]
+script = ExtResource("2_qowbj")
+speaker_alias = &"farmer"
+entry_text = "Hello! My name is {{farmer}}!"
+next_entry = SubResource("Resource_nhnyp")
+metadata/_custom_type_script = "uid://bmfqc7s4folyl"
+
+[sub_resource type="Resource" id="Resource_pjohs"]
+script = ExtResource("1_7nvh7")
+dialogue_id = &"d0"
+dialogue_root = SubResource("Resource_lc2j6")
+metadata/_custom_type_script = "uid://ylrcis4cj76p"
+
+[resource]
+script = ExtResource("3_6cml4")
+alias = &"farmer"
+name_pool = Array[String](["Bob", "Jerry", "Don", "Juan"])
+dialogues = Array[ExtResource("1_7nvh7")]([SubResource("Resource_pjohs")])
+metadata/_custom_type_script = "uid://bpksk2806qlpl"

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cp7eql4s5xvgk" path="res://assets/img/Characters/Basic Charakter Spritesheet.png" id="1_4anbu"]
 [ext_resource type="Script" uid="uid://bjo8ujbkj45by" path="res://src/player/player.gd" id="1_rxibo"]
-[ext_resource type="Resource" uid="uid://b0lpetg0dy55y" path="res://assets/data/characters/player/player.tres" id="2_mf2ua"]
+[ext_resource type="Resource" uid="uid://b0lpetg0dy55y" path="res://assets/data/characters/player.tres" id="2_mf2ua"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jt8b1"]
 radius = 5.0

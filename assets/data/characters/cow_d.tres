@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://dw7owgeygorkd"]
+
+[ext_resource type="Script" uid="uid://ylrcis4cj76p" path="res://src/dialogue/dialogue_data.gd" id="1_mbi6x"]
+[ext_resource type="Script" uid="uid://bpksk2806qlpl" path="res://src/character-data/character_data.gd" id="4_i657j"]
+
+[resource]
+script = ExtResource("4_i657j")
+alias = &"cow_d"
+name_pool = Array[String](["Hans", "Bruno", "Taurus", "Buck", "Dutch"])
+metadata/_custom_type_script = "uid://bpksk2806qlpl"

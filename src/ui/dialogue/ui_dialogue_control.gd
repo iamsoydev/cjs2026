@@ -11,21 +11,21 @@ signal dialogue_present_started
 @onready var dialogue_choices: DialogueChoices = $CenterContainer/DialoguePanelContainer/MarginContainer/VBoxContainer/DialogueChoices
 
 var making_choice := false
+var _presenting := false
+var template_regex := RegEx.new()
 
 func _ready() -> void:
-	pass
+	# TODO: Should UIDialogueControl read in character data independantly
+	#	instead of getting it from CharacterDB?
+	template_regex.compile("{{.*?}}")
+	dialogue_present_started.connect(func(): _presenting = true)
+	dialogue_present_finished.connect(func(): _presenting = false)
 
 func _input(event: InputEvent) -> void:
-	var dialogue := Dialogue.new()
+	# TODO: Add Choice Functionality
 	if event.is_action_pressed("interact") or event.is_action_pressed("ui_accept"):
-		if making_choice:
-			making_choice = false
-			# TODO: Record made choice
-			# FIXME: I shouldn't be doing this to trigger the completion of a quest
-			#dialogue_node.last_dialogue_entry_reached.emit(dialogue_node.get_active_sequence(), dialogue_node.get_active_dialogue_entry_idx())
-			#dialogue_node.set_sequence(dc.choices[dialogue_choices.get_focused_choice()].next_seq_idx)
-			#SignalEvents.ui_dialogue_choice_made.emit(dc.choices[dialogue_choices.get_focused_choice()].text)
-			#dialogue = dialogue_node.get_active_dialogue_entry()
+		if _presenting:
+			_presenting = false
 		else:
 			next_dialogue_requested.emit()
 	elif event.is_action_pressed("ui_up") or event.is_action_pressed("ui_right") or event.is_action_pressed("walk_right"):
@@ -35,17 +35,25 @@ func _input(event: InputEvent) -> void:
 		if making_choice:
 			dialogue_choices.focus_prev()
 
-func present_dialogue(dialogue: DialogueEntryData) -> void:
-	speaker_name_label.text = dialogue.speaker.name
+func process_dialogue_text(entry_text: String) -> String:
+	var ret := entry_text
+	var k := template_regex.search(entry_text)
+	while k:
+		var alias = k.strings[0].trim_prefix("{{").trim_suffix("}}")
+		var character_name := CharacterDB.alias_to_name(alias)
+		if character_name.is_empty(): character_name = "Not Found"
+		ret = ret.replace(k.strings[0], character_name)
+		k = template_regex.search(entry_text, k.get_end())
+	return ret
 
-	# TODO: perform presentation anims
+func present_dialogue(dialogue: DialogueEntryData) -> void:
+	speaker_name_label.text = CharacterDB.alias_to_name(dialogue.speaker_alias)
+	var text := process_dialogue_text(dialogue.entry_text)
+	rich_text_label.visible_characters = 0
+	rich_text_label.text = text
 	dialogue_present_started.emit()
-	rich_text_label.text = dialogue.entry_text
+	while rich_text_label.visible_characters != text.length():
+		if not _presenting: rich_text_label.visible_characters = -1; break
+		rich_text_label.visible_characters += 1
+		await get_tree().create_timer(0.03).timeout
 	dialogue_present_finished.emit()
-	#if dialogue is DialogueChoice:
-		#dialogue_choices.set_choices(dialogue.choices)
-		#dialogue_choices.visible = true
-		#making_choice = true
-	#else:
-		#dialogue_choices.visible = false
-		#making_choice = false

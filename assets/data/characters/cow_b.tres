@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://bjo1bmflhuc43"]
+
+[ext_resource type="Script" uid="uid://ylrcis4cj76p" path="res://src/dialogue/dialogue_data.gd" id="1_yjgwx"]
+[ext_resource type="Script" uid="uid://bpksk2806qlpl" path="res://src/character-data/character_data.gd" id="3_qpi4p"]
+
+[resource]
+script = ExtResource("3_qpi4p")
+alias = &"cow_b"
+name_pool = Array[String](["Bertha", "Dandelion", "Buttercup", "Clover", "Daisy"])
+metadata/_custom_type_script = "uid://bpksk2806qlpl"

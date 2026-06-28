@@ -3,7 +3,7 @@ extends Resource
 
 signal dialogue_entry_reached
 
-@export var speaker: CharacterData
+@export var speaker_alias: StringName = &""
 @export_multiline var entry_text: String
 @export var next_entry: DialogueEntryData
 

@@ -17,8 +17,11 @@ signal dialogue_choice_made(dialogue_id: StringName, entry_idx: int, choice_data
 var _signal_emit_funcs: Array[Callable] = []
 #var _signal_discon_funcs: Array[Callable] = []
 
-func _ready() -> void:
+func setup_signals() -> void:
 	_setup_signal_conn(0, dialogue_data.dialogue_id, dialogue_data.dialogue_root)
+
+#func _ready() -> void:
+#	_setup_signal_conn(0, dialogue_data.dialogue_id, dialogue_data.dialogue_root)
 
 #func set_dialogue_data(data: DialogueData) -> void:
 	#if not _signal_emit_funcs.is_empty(): 
