@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuestNodeData" format=3 uid="uid://bo5btadcr72r7"]
+
+[ext_resource type="Script" uid="uid://e2thk7duothm" path="res://src/quest/quest_node_data.gd" id="1_puf17"]
+
+[resource]
+script = ExtResource("1_puf17")
+id = &"qao1t2"
+description = "Speak to {{cow_d}}"
+start_dependancies = Array[ExtResource("1_puf17")]([null])
+metadata/_custom_type_script = "uid://e2thk7duothm"

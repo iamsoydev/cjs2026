@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuestNodeData" format=3 uid="uid://cm1ls2rkudv6f"]
+
+[ext_resource type="Script" uid="uid://e2thk7duothm" path="res://src/quest/quest_node_data.gd" id="1_66rpb"]
+[ext_resource type="Resource" uid="uid://e0pyy0c0yu7r" path="res://assets/data/quest/quest_a/qao0.tres" id="2_yivsl"]
+[ext_resource type="Resource" uid="uid://b0fbmoaqrh7pd" path="res://assets/data/quest/quest_0/q0.tres" id="3_vfk8r"]
+[ext_resource type="Resource" uid="uid://c0ia1skot62ql" path="res://assets/data/quest/quest_a/qao1.tres" id="3_yivsl"]
+
+[resource]
+script = ExtResource("1_66rpb")
+id = &"qa"
+description = "Find out who got into {{farmer}}'s crop."
+start_dependancies = Dictionary[ExtResource("1_66rpb"), int]({
+ExtResource("3_vfk8r"): 1
+})
+completion_dependancies = Array[ExtResource("1_66rpb")]([ExtResource("2_yivsl"), ExtResource("3_yivsl")])
+metadata/_custom_type_script = "uid://e2thk7duothm"

@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="QuestObjectiveData" format=3 uid="uid://cabe7hu63up75"]
-
-[ext_resource type="Script" uid="uid://70ekqmvj87bl" path="res://src/quest/quest_objective_data.gd" id="1_gof3w"]
-
-[resource]
-script = ExtResource("1_gof3w")
-id = &"q0o1_meet_kyle"
-description = "Speak to kyle about what he knows about who stole the farmer's crop"
-metadata/_custom_type_script = "uid://70ekqmvj87bl"

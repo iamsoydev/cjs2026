@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuestNodeData" format=3 uid="uid://b6ouqh7tep7p0"]
+
+[ext_resource type="Script" uid="uid://e2thk7duothm" path="res://src/quest/quest_node_data.gd" id="1_cv4ok"]
+[ext_resource type="Resource" uid="uid://e0pyy0c0yu7r" path="res://assets/data/quest/quest_a/qao0.tres" id="2_dfdha"]
+
+[resource]
+script = ExtResource("1_cv4ok")
+id = &"qao1t0"
+description = "Speak to {{cow_a}}"
+start_dependancies = Array[ExtResource("1_cv4ok")]([ExtResource("2_dfdha")])
+metadata/_custom_type_script = "uid://e2thk7duothm"

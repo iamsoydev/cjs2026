@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="CJ Summer 2026"
+config/name="Riddle Farm"
 config/tags=PackedStringArray("active", "gamejam")
 run/main_scene="uid://dpunca036apws"
 config/features=PackedStringArray("4.7", "GL Compatibility")

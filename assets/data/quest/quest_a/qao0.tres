@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuestNodeData" format=3 uid="uid://e0pyy0c0yu7r"]
+
+[ext_resource type="Script" uid="uid://e2thk7duothm" path="res://src/quest/quest_node_data.gd" id="1_3bvk0"]
+[ext_resource type="Resource" uid="uid://c0ia1skot62ql" path="res://assets/data/quest/quest_a/qao1.tres" id="2_roswm"]
+
+[resource]
+script = ExtResource("1_3bvk0")
+id = &"qao0"
+description = "Speak to {{cow_a}} regarding who got into {{farmer}}'s crop."
+completion_dependancies = Array[ExtResource("1_3bvk0")]([ExtResource("2_roswm")])
+metadata/_custom_type_script = "uid://e2thk7duothm"
